@@ -1,0 +1,204 @@
+<resources>
+    <string name="app_name">GeographyPlay</string>
+    <string name="tab_text_1">Conocimiento</string>
+    <string name="tab_text_2">Juegos</string>
+    <string name="tab_text_3">Comprensión</string>
+    <string name="title_activity_inicio">Inicio</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="como_quieres_interactuar_con_la_informaci_n">¿Como Quieres Interactuar con la Información?</string>
+    <string name="btnSR">Sin Realidad Aumentada</string>
+    <string name="btnAR">Realidad Aumentada</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="button">Button</string>
+    <string name="geoplay">GEOPLAY</string>
+    <string name="iniciar">Iniciar</string>
+    <string name="men_principal">Menú Principal</string>
+    <string name="men">Menú</string>
+    <string name="didactico">didactico</string>
+    <string name="saber">Saber</string>
+    <string name="interactivo">Interactivo</string>
+    <string name="encuentra_las_parejas">Encuentra las parejas</string>
+    <string name="jugador_0">Jugador: 0</string>
+    <string name="puntaje_jugador_0">Puntaje Jugador: 0</string>
+    <string name="concentrese">Concentrese</string>
+    <string name="puzzle">Puzzle</string>
+    <string name="enlazar">Enlazar</string>
+    <string name="elige_un_juego">Elige un Juego</string>
+    <string name="arma_el_rompecabezas">Arma el Rompecabezas</string>
+    <string name="title_activity_informacion">Informacion</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_info">Info</string>
+    <string name="antigua_y_barbuda">Antigua y Barbuda</string>
+    <string name="contenido_txt1">EXTENSIÓN TERRITORIAL: 440 Kilometros Cuadrados\nPOBLACIÓN: 100.963 personas aproximadamente\nCAPITAL: Saint John\nIDIOMA: Su idioma oficial es el inglés</string>
+    <string name="title_activity_interactivo">Interactivo</string>
+    <string name="contenido_txt2">EXTENSIÓN TERRITORIAL: 2.78 Millones de Kilometros Cuadrados\nPOBLACIÓN: 43.85 millones de personas aproximadamente\nCAPITAL: Buenos Aires\nIDIOMA: Su idioma oficial es el español</string>
+    <string name="argentina">Argentina</string>
+    <string name="contenido_txt3">EXTENSIÓN TERRITORIAL: 13.878 Kilometros Cuadrados\nPOBLACIÓN: 391.232 personas aproximadamente\nCAPITAL: Nasáu\nIDIOMA: Su idioma oficial es el inglés</string>
+    <string name="bahamas">Bahamas</string>
+    <string name="barbados">Barbados</string>
+    <string name="contenido_txt4">EXTENSIÓN TERRITORIAL: 431 Kilometros Cuadrados\nPOBLACIÓN: 284.996 personas aproximadamente\nCAPITAL: Bridgetown\nIDIOMA: Su idioma oficial es el inglés</string>
+    <string name="belice">Belice</string>
+    <string name="contenido_txt5">EXTENSIÓN TERRITORIAL: 22.966 Kilometros Cuadrados\nPOBLACIÓN: 366.954 personas aproximadamente\nCAPITAL: Belmopán\nIDIOMA: Su idioma oficial es el inglés</string>
+    <string name="bolivia">Bolivia</string>
+    <string name="brasil">Brasil</string>
+    <string name="contenido_txt7">EXTENSIÓN TERRITORIAL: 8.516 Millones de Kilometros Cuadrados\nPOBLACIÓN: 207.7 millones de personas aproximadamente\nCAPITAL: Brasilia\nIDIOMA: Su idioma oficial es el portugués</string>
+    <string name="canada">Canadá</string>
+    <string name="contenido_txt8">EXTENSIÓN TERRITORIAL: 9.985 Millones de Kilometros Cuadrados\nPOBLACIÓN: 36.29 millones de personas aproximadamente\nCAPITAL: Ottawa\nIDIOMA: Su idioma oficial es el inglés seguido del francés</string>
+    <string name="chile">Chile</string>
+    <string name="contenido_txt9">EXTENSIÓN TERRITORIAL: 756.102 Kilometros Cuadrados\nPOBLACIÓN: 17.91 millones de personas aproximadamente\nCAPITAL: Santiago de Chile\nIDIOMA: Su idioma oficial es el español</string>
+    <string name="colombia">Colombia</string>
+    <string name="contenido_txt10">EXTENSIÓN TERRITORIAL: 1.142 Millones Kilometros Cuadrados\nPOBLACIÓN: 48.65 millones de personas aproximadamente\nCAPITAL: Bogotá\nIDIOMA: Su idioma oficial es el español</string>
+    <string name="costa_rica">Costa Rica</string>
+    <string name="contenido_txt11">EXTENSIÓN TERRITORIAL: 51.100 Kilometros Cuadrados\nPOBLACIÓN: 4.857 millones de personas aproximadamente\nCAPITAL: San José\nIDIOMA: Su idioma oficial es el español</string>
+    <string name="cuba">Cuba</string>
+    <string name="contenido_txt12">EXTENSIÓN TERRITORIAL: 109.884 Kilometros Cuadrados\nPOBLACIÓN: 11.48 millones de personas aproximadamente\nCAPITAL: La Habana\nIDIOMA: Su idioma oficial es el español</string>
+    <string name="dominica">Dominica</string>
+    <string name="contenido_txt13">EXTENSIÓN TERRITORIAL: 750 Kilometros Cuadrados\nPOBLACIÓN: 73.543 personas aproximadamente\nCAPITAL: Roseau\nIDIOMA: Su idioma oficial es el inglés</string>
+    <string name="ecuador">Ecuador</string>
+    <string name="contenido_txt14">EXTENSIÓN TERRITORIAL: 283.560 Kilometros Cuadrados\nPOBLACIÓN: 16.39 millones de personas aproximadamente\nCAPITAL: Quito\nIDIOMA: Su idioma oficial es el español</string>
+    <string name="contenido_txt15">EXTENSIÓN TERRITORIAL: 21.041 Kilometros Cuadrados\nPOBLACIÓN: 6.345 millones de personas aproximadamente\nCAPITAL: San Salvador\nIDIOMA: Su idioma oficial es el español</string>
+    <string name="el_salvador">El Salvador</string>
+    <string name="estados_unidos">Estados Unidos</string>
+    <string name="contenido_txt16">EXTENSIÓN TERRITORIAL: 9.834 Millones de Kilometros Cuadrados\nPOBLACIÓN: 323.1 millones de personas aproximadamente\nCAPITAL: Washington\nIDIOMA: Su idioma oficial es el inglés</string>
+    <string name="granada">Granada</string>
+    <string name="contenido_txt17">EXTENSIÓN TERRITORIAL: 348,5 Kilometros Cuadrados\nPOBLACIÓN: 107.317 personas aproximadamente\nCAPITAL: Saint George\nIDIOMA: Su idioma oficial es el inglés</string>
+    <string name="guatemala">Guatemala</string>
+    <string name="contenido_txt18">EXTENSIÓN TERRITORIAL: 108.889 Kilometros Cuadrados\nPOBLACIÓN: 16.58 millones de personas aproximadamente\nCAPITAL: Ciudad de Guatemala\nIDIOMA: Su idioma oficial es el español</string>
+    <string name="guyana">Guyana</string>
+    <string name="contenido_txt19">EXTENSIÓN TERRITORIAL: 214.970 Kilometros Cuadrados\nPOBLACIÓN: 773.303 personas aproximadamente\nCAPITAL: Georgetown\nIDIOMA: Su idioma oficial es el inglés</string>
+    <string name="haiti">Haití</string>
+    <string name="contenido_txt20">EXTENSIÓN TERRITORIAL: 27.750 Kilometros Cuadrados\nPOBLACIÓN: 10.85 millones de personas aproximadamente\nCAPITAL: Puerto Príncipe\nIDIOMA: Su idioma oficial es el haitiano seguido del francés</string>
+    <string name="honduras">Honduras</string>
+    <string name="contenido_txt21">EXTENSIÓN TERRITORIAL: 112.492 Kilometros Cuadrados\nPOBLACIÓN: 9.113 millones de personas aproximadamente\nCAPITAL: Tegucigalpa\nIDIOMA: Su idioma oficial es el español</string>
+    <string name="jamaica">Jamaica</string>
+    <string name="contenido_txt22">EXTENSIÓN TERRITORIAL: 10.991 Kilometros Cuadrados\nPOBLACIÓN: 2.881 millones de personas aproximadamente\nCAPITAL: Kingston\nIDIOMA: Su idioma oficial es el inglés</string>
+    <string name="mexico">México</string>
+    <string name="contenido_txt23">EXTENSIÓN TERRITORIAL: 1.964 Millones de Kilometros Cuadrados\nPOBLACIÓN: 127.5 millones de personas aproximadamente\nCAPITAL: Ciudad de México\nIDIOMA: Su idioma oficial es el español</string>
+    <string name="nicaragua">Nicaragua</string>
+    <string name="contenido_txt24">EXTENSIÓN TERRITORIAL: 130.375 Kilometros Cuadrados\nPOBLACIÓN: 6.15 millones de personas aproximadamente\nCAPITAL: Managua\nIDIOMA: Su idioma oficial es el español</string>
+    <string name="panama">Panamá</string>
+    <string name="contenido_txt25">EXTENSIÓN TERRITORIAL: 74.177 Kilometros Cuadrados\nPOBLACIÓN: 4.034 millones de personas aproximadamente\nCAPITAL: Panamá\nIDIOMA: Su idioma oficial es el español</string>
+    <string name="paraguay">Paraguay</string>
+    <string name="contenido_txt26">EXTENSIÓN TERRITORIAL: 406.752 Kilometros Cuadrados\nPOBLACIÓN: 6.725 millones de personas aproximadamente\nCAPITAL: Asunción\nIDIOMA: Su idioma oficial es el español</string>
+    <string name="peru">Perú</string>
+    <string name="contenido_txt27">EXTENSIÓN TERRITORIAL: 1.285 Millones de Kilometros Cuadrados\nPOBLACIÓN: 31.77 millones de personas aproximadamente\nCAPITAL: Lima\nIDIOMA: Su idioma oficial es el español</string>
+    <string name="rep_blica_dominicana">República Dominicana</string>
+    <string name="contenido_txt28">EXTENSIÓN TERRITORIAL: 48.442 Kilometros Cuadrados\nPOBLACIÓN: 10.65 millones de personas aproximadamente\nCAPITAL: Santo Domingo\nIDIOMA: Su idioma oficial es el español</string>
+    <string name="san_cristobal_y_nieves">San Cristóbal y Nieves</string>
+    <string name="contenido_txt29">EXTENSIÓN TERRITORIAL: 261 Kilometros Cuadrados\nPOBLACIÓN: 54.821 personas aproximadamente\nCAPITAL: Basseterre\nIDIOMA: Su idioma oficial es el inglés</string>
+    <string name="granadinas">San Vicente y las Granadinas</string>
+    <string name="contenido_txt30">EXTENSIÓN TERRITORIAL: 389 Kilometros Cuadrados\nPOBLACIÓN: 109.643 personas aproximadamente\nCAPITAL: Kingstown\nIDIOMA: Su idioma oficial es el inglés seguido del español</string>
+    <string name="santa_lucia">Santa Lucía</string>
+    <string name="contenido_txt31">EXTENSIÓN TERRITORIAL: 617 Kilometros Cuadrados\nPOBLACIÓN: 178.015 personas aproximadamente\nCAPITAL: Castries\nIDIOMA: Su idioma oficial es el inglés</string>
+    <string name="surinam">Surinam</string>
+    <string name="contenido_txt32">EXTENSIÓN TERRITORIAL: 163.821 Kilometros Cuadrados\nPOBLACIÓN: 558.368 personas aproximadamente\nCAPITAL: Paramaribo\nIDIOMA: Su idioma oficial es el neerlandés</string>
+    <string name="trinidad_y_tobago">Trinidad y Tobago</string>
+    <string name="contenido_txt33">EXTENSIÓN TERRITORIAL: 5.131 Kilometros Cuadrados\nPOBLACIÓN: 1.365 millones de personas aproximadamente\nCAPITAL: Puerto España\nIDIOMA: Su idioma oficial es el inglés</string>
+    <string name="contenido_txt34">EXTENSIÓN TERRITORIAL: 176.215 Kilometros Cuadrados\nPOBLACIÓN: 3.444 millones de personas aproximadamente\nCAPITAL: Montevideo\nIDIOMA: idioma oficial es el español</string>
+    <string name="uruguay">Uruguay</string>
+    <string name="venezuela">Venezuela</string>
+    <string name="contenido_txt35">EXTENSIÓN TERRITORIAL: 916.445 Kilometros Cuadrados\nPOBLACIÓN: 31.57 millones de personas aproximadamente\nCAPITAL: Caracas\nIDIOMA: idioma oficial es el español</string>
+    <string name="contenido_txt">EXTENSIÓN TERRITORIAL: 1.099 Millones de Kilometros Cuadrados\nPOBLACIÓN: 10.89 millones de personas aproximadamente\nCAPITAL: La Paz\nIDIOMA: Su idioma oficial es el español seguido del quechua y el aimara</string>
+    <string name="contenido_txt6">EXTENSIÓN TERRITORIAL: 1.099 Millones de Kilometros Cuadrados\nPOBLACIÓN: 10.89 millones de personas aproximadamente\nCAPITAL: La Paz\nIDIOMA: Su idioma oficial es el español seguido del quechua y el aimara</string>
+    <string name="todo">TODO</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_menu_interactivo">MenuInteractivo</string>
+    <string name="title_activity_menu">Menu</string>
+</resources>

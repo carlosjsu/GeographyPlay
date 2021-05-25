@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/azul">
+
+    <TextView
+        android:id="@+id/Np"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/Label_Pregunta"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="11dp"
+        android:text="TextView"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/Label_Pregunta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="51dp"
+        android:fontFamily="@font/acme"
+        android:text="Módulo Saber"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textColorHighlight="@android:color/black"
+        android:textColorLink="@android:color/black"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/Text_Pregunta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/Label_Pregunta"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:text="TextView"
+        android:textColor="@android:color/background_dark"
+        android:textSize="28sp" />
+
+    <View
+        android:id="@+id/ruler"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/Text_Pregunta"
+        android:layout_marginTop="10dp"
+        android:background="#7a353434" />
+
+    <RadioGroup
+        android:id="@+id/grupo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Text_Pregunta"
+        android:layout_alignStart="@+id/Text_Pregunta"
+        android:layout_below="@+id/ruler"
+        android:layout_marginTop="10dp">
+
+
+        <RadioButton
+            android:id="@+id/Respuesta1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="RadioButton"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/Respuesta2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="RadioButton"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/Respuesta3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="RadioButton"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/Respuesta4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="RadioButton"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_Responder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="Responder" />
+
+</RelativeLayout>

@@ -1,0 +1,2 @@
+rootProject.name = "GeographyPlay"
+include ':app'

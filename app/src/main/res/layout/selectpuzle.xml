@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/azul"
+    tools:context="com.udistrital.geographyplay.SelectPuzle">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/acme"
+        android:text="Elige un Rompecabezas"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@android:color/background_light"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal" />
+
+    <Button
+        android:id="@+id/btnSur"
+        android:layout_width="116dp"
+        android:layout_height="149dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70dp"
+        android:background="@drawable/botonsur"
+        android:text="SurAmerica"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/btnNorte"
+        android:layout_width="182dp"
+        android:layout_height="119dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="165dp"
+        android:background="@drawable/botonnorte"
+        android:text="Norte y CentroAmerica"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold|italic" />
+
+</RelativeLayout>

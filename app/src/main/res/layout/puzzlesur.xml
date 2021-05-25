@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/azul"
+    android:orientation="vertical"
+    tools:context="com.udistrital.geographyplay.PuzzleSur"
+    tools:ignore="ContentDescription">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:fontFamily="@font/acme"
+        android:text="Arma el Rompecabezas"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal" />
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cuadroBlanco8"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="50dp"
+        android:background="@color/colorPrimaryDark">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="27dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgPt1Colombia"
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="14dp"
+                android:layout_marginLeft="14dp"
+                android:src="@drawable/parte1" />
+
+            <ImageView
+                android:id="@+id/imgPt2Venezuela"
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:layout_alignTop="@+id/imgPt1Colombia"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_toEndOf="@+id/imgPt1Colombia"
+                android:layout_toRightOf="@+id/imgPt1Colombia"
+                android:src="@drawable/parte2" />
+
+            <ImageView
+                android:id="@+id/imgPt3Guyanas"
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:layout_alignTop="@+id/imgPt2Venezuela"
+                android:layout_marginStart="11dp"
+                android:layout_marginLeft="11dp"
+                android:layout_toEndOf="@+id/imgPt2Venezuela"
+                android:layout_toRightOf="@+id/imgPt2Venezuela"
+                android:src="@drawable/parte3" />
+
+            <ImageView
+                android:id="@+id/imgPt4Peru"
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:layout_alignTop="@+id/imgPt3Guyanas"
+                android:layout_marginStart="11dp"
+                android:layout_marginLeft="11dp"
+                android:layout_toEndOf="@+id/imgPt3Guyanas"
+                android:layout_toRightOf="@+id/imgPt3Guyanas"
+                android:src="@drawable/parte4" />
+
+            <ImageView
+                android:id="@+id/imgPt5Bolivia"
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:layout_alignTop="@+id/imgPt4Peru"
+                android:layout_marginStart="11dp"
+                android:layout_marginLeft="11dp"
+                android:layout_toEndOf="@+id/imgPt4Peru"
+                android:layout_toRightOf="@+id/imgPt4Peru"
+                android:src="@drawable/parte5" />
+
+            <ImageView
+                android:id="@+id/imgPt6Brasil"
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:layout_alignTop="@+id/imgPt5Bolivia"
+                android:layout_marginStart="11dp"
+                android:layout_marginLeft="11dp"
+                android:layout_toEndOf="@+id/imgPt5Bolivia"
+                android:layout_toRightOf="@+id/imgPt5Bolivia"
+                android:src="@drawable/parte6" />
+
+            <ImageView
+                android:id="@+id/imgPt7Chile"
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:layout_alignTop="@+id/imgPt6Brasil"
+                android:layout_marginStart="11dp"
+                android:layout_marginLeft="11dp"
+                android:layout_toEndOf="@+id/imgPt6Brasil"
+                android:layout_toRightOf="@+id/imgPt6Brasil"
+                android:src="@drawable/parte7" />
+
+            <ImageView
+                android:id="@+id/imgPt8Argentina"
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:layout_alignTop="@+id/imgPt7Chile"
+                android:layout_marginStart="11dp"
+                android:layout_marginLeft="11dp"
+                android:layout_toEndOf="@+id/imgPt7Chile"
+                android:layout_toRightOf="@+id/imgPt7Chile"
+                android:src="@drawable/parte8" />
+
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+    <ImageView
+        android:id="@+id/cuadroBlanco1"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_alignLeft="@+id/Pt1Colombia"
+        android:layout_alignStart="@+id/Pt1Colombia"
+        android:layout_alignTop="@+id/Pt1Colombia"
+        app:srcCompat="@drawable/imagen9" />
+
+    <ImageView
+        android:id="@+id/cuadroBlanco2"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_alignTop="@+id/cuadroBlanco1"
+        android:layout_toEndOf="@+id/cuadroBlanco1"
+        android:layout_toRightOf="@+id/cuadroBlanco1"
+        app:srcCompat="@drawable/imagen9" />
+
+    <ImageView
+        android:id="@+id/cuadroBlanco3"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_alignTop="@+id/cuadroBlanco2"
+        android:layout_toEndOf="@+id/cuadroBlanco2"
+        android:layout_toRightOf="@+id/cuadroBlanco2"
+        app:srcCompat="@drawable/imagen9" />
+
+    <ImageView
+        android:id="@+id/cuadroBlanco4"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_alignLeft="@+id/cuadroBlanco1"
+        android:layout_alignStart="@+id/cuadroBlanco1"
+        android:layout_below="@+id/cuadroBlanco1"
+        app:srcCompat="@drawable/imagen9" />
+
+    <ImageView
+        android:id="@+id/cuadroBlanco5"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_below="@+id/cuadroBlanco1"
+        android:layout_toEndOf="@+id/cuadroBlanco4"
+        android:layout_toRightOf="@+id/cuadroBlanco4"
+        app:srcCompat="@drawable/imagen9" />
+
+    <ImageView
+        android:id="@+id/cuadroBlanco6"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_below="@+id/cuadroBlanco3"
+        android:layout_toEndOf="@+id/cuadroBlanco5"
+        android:layout_toRightOf="@+id/cuadroBlanco5"
+        app:srcCompat="@drawable/imagen9" />
+
+    <ImageView
+        android:id="@+id/cuadroBlanco7"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_alignLeft="@+id/cuadroBlanco4"
+        android:layout_alignStart="@+id/cuadroBlanco4"
+        android:layout_below="@+id/cuadroBlanco4"
+        app:srcCompat="@drawable/parte9" />
+
+    <ImageView
+        android:id="@+id/cuadroBlanco8"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_below="@+id/cuadroBlanco5"
+        android:layout_toEndOf="@+id/Pt7Chile"
+        android:layout_toRightOf="@+id/Pt7Chile"
+        app:srcCompat="@drawable/parte9" />
+
+    <ImageView
+        android:id="@+id/cuadroBlanco9"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_below="@+id/cuadroBlanco5"
+        android:layout_toEndOf="@+id/cuadroBlanco8"
+        android:layout_toRightOf="@+id/cuadroBlanco8"
+        app:srcCompat="@drawable/parte9" />
+
+    <ImageView
+        android:id="@+id/Pt1Colombia"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="21dp"
+        android:src="@drawable/parte1"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/Pt2Venezuela"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_alignTop="@+id/Pt1Colombia"
+        android:layout_toEndOf="@+id/Pt1Colombia"
+        android:layout_toRightOf="@+id/Pt1Colombia"
+        android:src="@drawable/parte2"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/Pt3Guyanas"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_alignTop="@+id/Pt2Venezuela"
+        android:layout_toEndOf="@+id/Pt2Venezuela"
+        android:layout_toRightOf="@+id/Pt2Venezuela"
+        android:src="@drawable/parte3"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/Pt4Peru"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_alignLeft="@+id/cuadroBlanco1"
+        android:layout_alignStart="@+id/cuadroBlanco1"
+        android:layout_below="@+id/cuadroBlanco1"
+        android:src="@drawable/parte4"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/Pt5Bolivia"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_below="@+id/cuadroBlanco2"
+        android:layout_toEndOf="@+id/cuadroBlanco4"
+        android:layout_toRightOf="@+id/cuadroBlanco4"
+        android:src="@drawable/parte5"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/Pt6Brasil"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_below="@+id/cuadroBlanco3"
+        android:layout_toEndOf="@+id/cuadroBlanco5"
+        android:layout_toRightOf="@+id/cuadroBlanco5"
+        android:src="@drawable/parte6"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/Pt7Chile"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_alignLeft="@+id/cuadroBlanco4"
+        android:layout_alignStart="@+id/cuadroBlanco4"
+        android:layout_below="@+id/cuadroBlanco4"
+        android:src="@drawable/parte7"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/Pt8Argentina"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_below="@+id/cuadroBlanco5"
+        android:layout_toEndOf="@+id/Pt7Chile"
+        android:layout_toRightOf="@+id/Pt7Chile"
+        android:src="@drawable/parte8"
+        android:visibility="invisible" />
+
+</RelativeLayout>

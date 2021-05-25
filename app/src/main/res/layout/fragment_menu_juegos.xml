@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/azul"
+    tools:context="com.udistrital.geographyplay.MenuJuegos">
+
+    <Button
+        android:id="@+id/btnConcentrese"
+        android:layout_width="164dp"
+        android:layout_height="125dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="79dp"
+        android:background="@drawable/btnmemorama"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/concentrese"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        tools:layout_editor_absoluteX="131dp"
+        tools:layout_editor_absoluteY="288dp" />
+
+    <Button
+        android:id="@+id/btnPuzle"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="184dp"
+        android:background="@drawable/btnpuzzle"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/puzzle"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="170dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp"
+        android:fontFamily="@font/acme"
+        android:text="@string/elige_un_juego"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/background_light"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="90dp"
+        tools:layout_editor_absoluteY="60dp"
+        android:gravity="center_horizontal" />
+</RelativeLayout>
