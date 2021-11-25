@@ -27,7 +27,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="51dp"
         android:fontFamily="@font/acme"
-        android:text="Módulo Saber"
+        android:text="Módulo Conocimiento"
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
         android:textColorHighlight="@android:color/black"

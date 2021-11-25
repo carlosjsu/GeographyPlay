@@ -23,19 +23,28 @@
         android:textSize="30sp"
         android:gravity="center_horizontal" />
 
-    <Button
+    <ImageButton
         android:id="@+id/Norte"
         android:layout_width="182dp"
         android:layout_height="119dp"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="69dp"
-        android:background="@drawable/botonnorte"
+        android:background="@drawable/botonnorte" />
+    <TextView
+        android:layout_width="182dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:textSize="24dp"
+        android:textAlignment="center"
         android:text="America del Norte y centro"
         android:textColor="@android:color/background_light"
-        android:textStyle="bold|italic" />
+        android:textStyle="bold|italic"
+        android:gravity="center_horizontal" />
 
-    <Button
+    <ImageButton
         android:id="@+id/Sur"
         android:layout_width="116dp"
         android:layout_height="149dp"
@@ -46,5 +55,19 @@
         android:text="America del Sur"
         android:textColor="@android:color/background_light"
         android:textStyle="bold|italic" />
+
+    <TextView
+        android:layout_width="115dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="115dp"
+        android:textSize="24dp"
+        android:textAlignment="center"
+        android:text="America del Sur"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold|italic"
+        android:gravity="center_horizontal"
+        />
 
 </RelativeLayout>

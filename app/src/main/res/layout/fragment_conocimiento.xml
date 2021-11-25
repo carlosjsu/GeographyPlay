@@ -13,7 +13,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="27dp"
         android:fontFamily="@font/acme"
-        android:text="Módulo Saber"
+        android:text="Módulo del Conocimiento"
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
         android:textColorHighlight="@android:color/black"
@@ -31,7 +31,7 @@
         android:layout_below="@+id/textView3"
         android:layout_marginTop="46dp"
         android:fontFamily="@font/acme"
-        android:text="Estas en el módulo de saber en el cual vas a responder un cuestionario de 6 preguntas acerca de los temas apoyados en la aplicación, presiona iniciar cuestionario.
+        android:text="Estas en el módulo del conocimiento en el cual vas a responder un cuestionario de 6 preguntas acerca de los temas apoyados en la aplicación, presiona iniciar cuestionario.
 "
         android:textAlignment="center"
         android:textColor="@android:color/background_light"

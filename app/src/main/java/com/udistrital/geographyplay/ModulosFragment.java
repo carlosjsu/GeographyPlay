@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.udistrital.geographyplay.databinding.FragmentModulosBinding;
@@ -24,14 +25,14 @@ public class ModulosFragment extends Fragment {
 
     private FragmentModulosBinding binding;
     View vista;
-    Button sinAR;
-    Button conAR;
+    ImageButton sinAR;
+    ImageButton conAR;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         vista = inflater.inflate(R.layout.fragment_modulos, container, false);
-        sinAR=(Button) vista.findViewById(R.id.btnSR);
+        sinAR=(ImageButton) vista.findViewById(R.id.btnSR);
         sinAR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

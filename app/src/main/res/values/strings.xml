@@ -201,4 +201,5 @@
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_menu_interactivo">MenuInteractivo</string>
     <string name="title_activity_menu">Menu</string>
+    <string name="title_activity_conocimientos">Conocimientos</string>
 </resources>

@@ -23,7 +23,7 @@
         android:textStyle="bold"
         android:gravity="center_horizontal" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btnSur"
         android:layout_width="116dp"
         android:layout_height="149dp"
@@ -34,17 +34,38 @@
         android:text="SurAmerica"
         android:textColor="@android:color/background_light"
         android:textStyle="bold|italic" />
+    <TextView
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="140dp"
+        android:text="SurAmerica"
+        android:textAlignment="center"
+        android:textSize="24dp"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold|italic"
+        android:gravity="center_horizontal" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btnNorte"
         android:layout_width="182dp"
         android:layout_height="119dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="165dp"
-        android:background="@drawable/botonnorte"
+        android:background="@drawable/botonnorte" />
+    <TextView
+        android:layout_width="160dp"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="180dp"
         android:text="Norte y CentroAmerica"
+        android:textAlignment="center"
+        android:textSize="24dp"
         android:textColor="@android:color/background_light"
-        android:textStyle="bold|italic" />
+        android:textStyle="bold|italic"
+        android:gravity="center_horizontal" />
 
 </RelativeLayout>

@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.udistrital.geographyplay.R;
 import com.udistrital.geographyplay.databinding.FragmentMenuJuegosBinding;
@@ -20,8 +21,8 @@ public class MenuJuegos extends Fragment {
 
     private FragmentMenuJuegosBinding binding;
     View vista;
-    Button memorama;
-    Button puzle;
+    ImageButton memorama;
+    ImageButton puzle;
     private Context mContext;
     @Override
     public void onAttach(Context context) {
@@ -38,7 +39,7 @@ public class MenuJuegos extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         vista = inflater.inflate(R.layout.fragment_menu_juegos, container, false);
-        memorama=(Button) vista.findViewById(R.id.btnConcentrese);
+        memorama=(ImageButton) vista.findViewById(R.id.btnConcentrese);
         memorama.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,7 +47,7 @@ public class MenuJuegos extends Fragment {
                 startActivity(intent);
             }
         });
-        puzle=(Button) vista.findViewById(R.id.btnPuzle);
+        puzle=(ImageButton) vista.findViewById(R.id.btnPuzle);
         puzle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

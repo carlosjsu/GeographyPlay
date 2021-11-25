@@ -8,19 +8,20 @@ import androidx.fragment.app.FragmentManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class SelectConcentrese extends AppCompatActivity {
 
-    Button memosur;
-    Button memonorte;
+    ImageButton memosur;
+    ImageButton memonorte;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.selectconcentrese);
 
-        memosur = (Button)findViewById(R.id.Sur);
-        memonorte = (Button)findViewById(R.id.Norte);
+        memosur = (ImageButton)findViewById(R.id.Sur);
+        memonorte = (ImageButton)findViewById(R.id.Norte);
         memosur.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

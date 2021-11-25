@@ -5,17 +5,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class SelectPuzle extends AppCompatActivity {
 
-    Button bsur;
-    Button bnorte;
+    ImageButton bsur;
+    ImageButton bnorte;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.selectpuzle);
-        bsur = (Button)findViewById(R.id.btnSur);
-        bnorte = (Button)findViewById(R.id.btnNorte);
+        bsur = (ImageButton)findViewById(R.id.btnSur);
+        bnorte = (ImageButton)findViewById(R.id.btnNorte);
         bsur.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

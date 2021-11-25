@@ -31,7 +31,7 @@ public class Inicio extends AppCompatActivity {
         Iniciar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent Iniciar = new Intent(Inicio.this, MainActivity.class);
+                Intent Iniciar = new Intent(Inicio.this, login.class);
                 startActivity(Iniciar);
             }
         });

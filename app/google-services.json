@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "550433956687",
+    "project_id": "geographyplay",
+    "storage_bucket": "geographyplay.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:550433956687:android:13b0b4018c4aa4a4ea1b3a",
+        "android_client_info": {
+          "package_name": "com.udistrital.geographyplay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "550433956687-erbonhq34u6jr44d06g5cckuqcv03qro.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCebFaxQQSCKVq-Y4ZJsJ_1A7H8Cq4aDXI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "550433956687-erbonhq34u6jr44d06g5cckuqcv03qro.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
