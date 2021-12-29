@@ -2,6 +2,7 @@ package com.udistrital.geographyplay;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Base64;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -22,6 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import org.jetbrains.annotations.NotNull;
 
 import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Pattern;
@@ -45,7 +47,7 @@ public class registrarse extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registrarse);
         mAuth = FirebaseAuth.getInstance();
-        mDataBase = FirebaseDatabase.getInstance().getReference("");
+        mDataBase = FirebaseDatabase.getInstance().getReference();
         email = findViewById(R.id.correoRegistro);
         pasword = findViewById(R.id.contraseniaRegistro);
         user = findViewById(R.id.usuarioRegistro);
@@ -77,12 +79,12 @@ public class registrarse extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-
+                            String stringKey = Base64.encodeToString(key.getEncoded(), Base64.DEFAULT);
                             Map<String, Object> map = new HashMap<>();
                             map.put("user", user.getText().toString());
                             map.put("email", email.getText().toString());
                             map.put("password", passEncrip);
-                            map.put("app",key.toString());
+                            map.put("app",stringKey);
 
                             String id = mAuth.getCurrentUser().getUid();
                             mDataBase.child("Users").child(id).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -132,14 +134,17 @@ public class registrarse extends AppCompatActivity {
     private String encriptar(SecretKeySpec secretKeySpec, String mensaje) throws Exception {
         Cipher cipher = Cipher.getInstance(AES);
         cipher.init(Cipher.ENCRYPT_MODE,secretKeySpec);
-        byte[] mensajeEn = cipher.doFinal(mensaje.getBytes(StandardCharsets.UTF_8));
-        return new String(mensajeEn);
+        byte[] mensajeEn = cipher.doFinal(mensaje.getBytes());
+        String mensajeEncrip = Base64.encodeToString(mensajeEn, Base64.DEFAULT);
+        return mensajeEncrip;
     }
 
     private String desEncriptar(SecretKeySpec secretKeySpec, String mensaje) throws Exception {
         Cipher cipher = Cipher.getInstance(AES);
         cipher.init(Cipher.DECRYPT_MODE,secretKeySpec);
-        byte[] mensajeDes = cipher.doFinal(mensaje.getBytes(StandardCharsets.UTF_8));
-        return new String(mensajeDes);
+        byte[] mensajeDeco = Base64.decode(mensaje, Base64.DEFAULT);
+        byte[] mensajeByte = cipher.doFinal(mensajeDeco);
+        String mensajeDes = new String(mensajeByte);
+        return mensajeDes;
     }
 }
