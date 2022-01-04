@@ -3,6 +3,7 @@ package com.udistrital.geographyplay;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Base64;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -14,11 +15,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -40,14 +44,14 @@ public class registrarse extends AppCompatActivity {
     EditText user;
     Button registrarse;
     private FirebaseAuth mAuth;
-    private DatabaseReference mDataBase;
+    private FirebaseFirestore mDataBase;
     private static final String AES = "AES";
 
     protected void onCreate (Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registrarse);
         mAuth = FirebaseAuth.getInstance();
-        mDataBase = FirebaseDatabase.getInstance().getReference();
+        mDataBase = FirebaseFirestore.getInstance();
         email = findViewById(R.id.correoRegistro);
         pasword = findViewById(R.id.contraseniaRegistro);
         user = findViewById(R.id.usuarioRegistro);
@@ -79,6 +83,7 @@ public class registrarse extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
+                            String id = mAuth.getCurrentUser().getUid();
                             String stringKey = Base64.encodeToString(key.getEncoded(), Base64.DEFAULT);
                             Map<String, Object> map = new HashMap<>();
                             map.put("user", user.getText().toString());
@@ -86,22 +91,24 @@ public class registrarse extends AppCompatActivity {
                             map.put("password", passEncrip);
                             map.put("app",stringKey);
 
-                            String id = mAuth.getCurrentUser().getUid();
-                            mDataBase.child("Users").child(id).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+
+                            mDataBase.collection("Users").document(id).set(map).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
-                                public void onComplete(@NonNull @NotNull Task<Void> task2) {
-                                    if(task2.isSuccessful()){
-                                        try {
-                                            Toast.makeText(registrarse.this, "Autenticación satisfactoria: "+desEncriptar(key,passEncrip),
-                                                    Toast.LENGTH_SHORT).show();
-                                        } catch (Exception e) {
-                                            e.printStackTrace();
-                                        }
-                                        registroExitoso(task.getResult().getUser().getEmail());
-                                    }else{
-                                        Toast.makeText(registrarse.this, "Fallo autenticación dataBase",
+                                public void onSuccess(Void unused) {
+                                    try {
+                                        Toast.makeText(registrarse.this, "Autenticación satisfactoria: "+desEncriptar(key,passEncrip),
                                                 Toast.LENGTH_SHORT).show();
+                                    } catch (Exception e) {
+                                        e.printStackTrace();
                                     }
+                                }
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull @NotNull Exception e) {
+                                    Log.e("Error: ","Error base de datos: "+e);
+                                    Toast.makeText(registrarse.this, "Fallo autenticación dataBase",
+                                            Toast.LENGTH_SHORT).show();
+                                    registroExitoso(task.getResult().getUser().getEmail());
                                 }
                             });
                         }else{
