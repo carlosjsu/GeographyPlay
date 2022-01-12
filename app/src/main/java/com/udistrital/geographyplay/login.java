@@ -98,20 +98,6 @@ public class login extends AppCompatActivity {
                         }
                     }
                 });
-      /*  mAuth.signInWithEmailAndPassword(email.getText().toString(), passEncrip[0])
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>(){
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            Intent menu = new Intent(login.this, MainActivity.class);
-                            startActivity(menu);
-                        }else{
-                            Toast.makeText(login.this, "Correo y/o contraseña incorrecta",
-                                    Toast.LENGTH_SHORT).show();
-                        }
-
-                    }
-                });*/
     }
     private String encriptar(String stringKey, String mensaje) throws Exception {
         byte[] encodedKey     = Base64.decode(stringKey, Base64.DEFAULT);

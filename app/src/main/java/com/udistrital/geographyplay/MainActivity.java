@@ -17,7 +17,7 @@ import android.view.View;
 import com.udistrital.geographyplay.ui.main.SectionsPagerAdapter;
 import com.udistrital.geographyplay.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity implements ModulosFragment.OnFragmentInteractionListener, MenuJuegos.OnFragmentInteractionListener, ConocimientoFragment.OnFragmentInteractionListener  {
+public class MainActivity extends AppCompatActivity implements ModulosFragment.OnFragmentInteractionListener, MenuJuegos.OnFragmentInteractionListener  {
 
     private ActivityMainBinding binding;
 
@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity implements ModulosFragment.O
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
         SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
         ViewPager viewPager = binding.viewPager;
         viewPager.setAdapter(sectionsPagerAdapter);

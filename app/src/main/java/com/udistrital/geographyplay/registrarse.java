@@ -96,7 +96,7 @@ public class registrarse extends AppCompatActivity {
                                 @Override
                                 public void onSuccess(Void unused) {
                                     try {
-                                        Toast.makeText(registrarse.this, "Autenticación satisfactoria: "+desEncriptar(key,passEncrip),
+                                        Toast.makeText(registrarse.this, "Autenticación satisfactoria: ",
                                                 Toast.LENGTH_SHORT).show();
                                     } catch (Exception e) {
                                         e.printStackTrace();

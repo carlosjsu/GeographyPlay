@@ -21,8 +21,9 @@ public class MenuJuegos extends Fragment {
 
     private FragmentMenuJuegosBinding binding;
     View vista;
-    ImageButton memorama;
-    ImageButton puzle;
+    Button memorama;
+    Button puzle;
+    Button preguntas;
     private Context mContext;
     @Override
     public void onAttach(Context context) {
@@ -39,7 +40,7 @@ public class MenuJuegos extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         vista = inflater.inflate(R.layout.fragment_menu_juegos, container, false);
-        memorama=(ImageButton) vista.findViewById(R.id.btnConcentrese);
+        memorama=(Button)  vista.findViewById(R.id.btnConcentrese);
         memorama.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -47,11 +48,19 @@ public class MenuJuegos extends Fragment {
                 startActivity(intent);
             }
         });
-        puzle=(ImageButton) vista.findViewById(R.id.btnPuzle);
+        puzle=(Button)  vista.findViewById(R.id.btnPuzle);
         puzle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(),SelectPuzle.class);
+                startActivity(intent);
+            }
+        });
+        preguntas=(Button)  vista.findViewById(R.id.btnPreguntas);
+        preguntas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(),Saber.class);
                 startActivity(intent);
             }
         });
