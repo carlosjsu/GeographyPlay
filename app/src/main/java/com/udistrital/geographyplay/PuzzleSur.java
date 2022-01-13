@@ -13,9 +13,9 @@ import android.widget.ImageView;
 
 public class PuzzleSur extends AppCompatActivity {
 
-    ImageView cuadro1, cuadro2, cuadro3, cuadro4, cuadro5, cuadro6, cuadro7, cuadro8,
+    ImageView cuadro1, cuadro2, cuadro3, cuadro4, cuadro5, cuadro6, cuadro7, cuadro8,cuadro9,
             imgColombia, imgVenezuela, imgGuyanas, imgPeru, imgBolivia, imgBrasil, imgChile, imgArgentina,
-            imgColombia1, imgVenezuela1, imgGuyanas1, imgPeru1, imgBolivia1, imgBrasil1, imgChile1, imgArgentina1;
+            imgColombia1, imgVenezuela1, imgGuyanas1, imgPeru1, imgBolivia1, imgBrasil1, imgChile1, imgArgentina1, imgnn, imgnn9;
     int cont=0;
 
     @Override
@@ -30,6 +30,7 @@ public class PuzzleSur extends AppCompatActivity {
         cuadro6 = findViewById(R.id.cuadroBlanco6);
         cuadro7 = findViewById(R.id.cuadroBlanco7);
         cuadro8 = findViewById(R.id.cuadroBlanco8);
+        cuadro9 = findViewById(R.id.cuadroBlanco9);
         imgColombia = findViewById(R.id.imgPt1Colombia);
         imgColombia1 = findViewById(R.id.Pt1Colombia);
         imgVenezuela = findViewById(R.id.imgPt2Venezuela);
@@ -46,6 +47,8 @@ public class PuzzleSur extends AppCompatActivity {
         imgChile1 = findViewById(R.id.Pt7Chile);
         imgArgentina = findViewById(R.id.imgPt8Argentina);
         imgArgentina1 = findViewById(R.id.Pt8Argentina);
+        imgnn = findViewById(R.id.imgPt9);
+        imgnn9 = findViewById(R.id.Pt9nn);
         imgColombia.setOnTouchListener(new ChoiceTouchListener());
         imgVenezuela.setOnTouchListener(new ChoiceTouchListener());
         imgGuyanas.setOnTouchListener(new ChoiceTouchListener());
@@ -54,6 +57,7 @@ public class PuzzleSur extends AppCompatActivity {
         imgBrasil.setOnTouchListener(new ChoiceTouchListener());
         imgChile.setOnTouchListener(new ChoiceTouchListener());
         imgArgentina.setOnTouchListener(new ChoiceTouchListener());
+        imgnn.setOnTouchListener(new ChoiceTouchListener());
         cuadro1.setOnDragListener(new ChoiceDragListener());
         cuadro2.setOnDragListener(new ChoiceDragListener());
         cuadro3.setOnDragListener(new ChoiceDragListener());
@@ -62,6 +66,7 @@ public class PuzzleSur extends AppCompatActivity {
         cuadro6.setOnDragListener(new ChoiceDragListener());
         cuadro7.setOnDragListener(new ChoiceDragListener());
         cuadro8.setOnDragListener(new ChoiceDragListener());
+        cuadro9.setOnDragListener(new ChoiceDragListener());
     }
 
     private final class ChoiceTouchListener implements View.OnTouchListener {
@@ -150,13 +155,20 @@ public class PuzzleSur extends AppCompatActivity {
                                 ((ImageView) view).setImageDrawable(null);
                                 cont++;
                             }
+                        }if (v == cuadro9) {
+                            if (view == imgnn) {
+                                cuadro9.setVisibility(View.INVISIBLE);
+                                imgnn9.setVisibility(View.VISIBLE);
+                                ((ImageView) view).setImageDrawable(null);
+                                cont++;
+                            }
                         }
                     }
                     break;
                 case DragEvent.ACTION_DRAG_ENDED:
                     break;
             }
-            if(cont==8){
+            if(cont==9){
                 finalizar();
             }
             return true;

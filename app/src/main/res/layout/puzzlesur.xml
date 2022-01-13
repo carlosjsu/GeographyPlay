@@ -45,257 +45,278 @@
 
             <ImageView
                 android:id="@+id/imgPt1Colombia"
-                android:layout_width="70dp"
-                android:layout_height="80dp"
+                android:layout_width="89dp"
+                android:layout_height="123dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
-                android:layout_marginStart="14dp"
-                android:layout_marginLeft="14dp"
-                android:src="@drawable/parte1" />
+                android:layout_marginStart="19dp"
+                android:layout_marginLeft="19dp"
+                android:src="@drawable/puzzleres1" />
 
             <ImageView
                 android:id="@+id/imgPt2Venezuela"
-                android:layout_width="70dp"
-                android:layout_height="80dp"
+                android:layout_width="89dp"
+                android:layout_height="123dp"
                 android:layout_alignTop="@+id/imgPt1Colombia"
                 android:layout_marginStart="12dp"
                 android:layout_marginLeft="12dp"
                 android:layout_toEndOf="@+id/imgPt1Colombia"
                 android:layout_toRightOf="@+id/imgPt1Colombia"
-                android:src="@drawable/parte2" />
+                android:src="@drawable/puzzleres2" />
 
             <ImageView
                 android:id="@+id/imgPt3Guyanas"
-                android:layout_width="70dp"
-                android:layout_height="80dp"
+                android:layout_width="89dp"
+                android:layout_height="123dp"
                 android:layout_alignTop="@+id/imgPt2Venezuela"
                 android:layout_marginStart="11dp"
                 android:layout_marginLeft="11dp"
                 android:layout_toEndOf="@+id/imgPt2Venezuela"
                 android:layout_toRightOf="@+id/imgPt2Venezuela"
-                android:src="@drawable/parte3" />
+                android:src="@drawable/puzzleres3" />
 
             <ImageView
                 android:id="@+id/imgPt4Peru"
-                android:layout_width="70dp"
-                android:layout_height="80dp"
+                android:layout_width="89dp"
+                android:layout_height="123dp"
                 android:layout_alignTop="@+id/imgPt3Guyanas"
                 android:layout_marginStart="11dp"
                 android:layout_marginLeft="11dp"
                 android:layout_toEndOf="@+id/imgPt3Guyanas"
                 android:layout_toRightOf="@+id/imgPt3Guyanas"
-                android:src="@drawable/parte4" />
+                android:src="@drawable/puzzleres4" />
 
             <ImageView
                 android:id="@+id/imgPt5Bolivia"
-                android:layout_width="70dp"
-                android:layout_height="80dp"
+                android:layout_width="89dp"
+                android:layout_height="123dp"
                 android:layout_alignTop="@+id/imgPt4Peru"
                 android:layout_marginStart="11dp"
                 android:layout_marginLeft="11dp"
                 android:layout_toEndOf="@+id/imgPt4Peru"
                 android:layout_toRightOf="@+id/imgPt4Peru"
-                android:src="@drawable/parte5" />
+                android:src="@drawable/puzzleres5" />
 
             <ImageView
                 android:id="@+id/imgPt6Brasil"
-                android:layout_width="70dp"
-                android:layout_height="80dp"
+                android:layout_width="89dp"
+                android:layout_height="123dp"
                 android:layout_alignTop="@+id/imgPt5Bolivia"
                 android:layout_marginStart="11dp"
                 android:layout_marginLeft="11dp"
                 android:layout_toEndOf="@+id/imgPt5Bolivia"
                 android:layout_toRightOf="@+id/imgPt5Bolivia"
-                android:src="@drawable/parte6" />
+                android:src="@drawable/puzzleres6" />
 
             <ImageView
                 android:id="@+id/imgPt7Chile"
-                android:layout_width="70dp"
-                android:layout_height="80dp"
+                android:layout_width="89dp"
+                android:layout_height="123dp"
                 android:layout_alignTop="@+id/imgPt6Brasil"
                 android:layout_marginStart="11dp"
                 android:layout_marginLeft="11dp"
                 android:layout_toEndOf="@+id/imgPt6Brasil"
                 android:layout_toRightOf="@+id/imgPt6Brasil"
-                android:src="@drawable/parte7" />
+                android:src="@drawable/puzzleres7" />
 
             <ImageView
                 android:id="@+id/imgPt8Argentina"
-                android:layout_width="70dp"
-                android:layout_height="80dp"
+                android:layout_width="89dp"
+                android:layout_height="123dp"
                 android:layout_alignTop="@+id/imgPt7Chile"
                 android:layout_marginStart="11dp"
                 android:layout_marginLeft="11dp"
                 android:layout_toEndOf="@+id/imgPt7Chile"
                 android:layout_toRightOf="@+id/imgPt7Chile"
-                android:src="@drawable/parte8" />
+                android:src="@drawable/puzzleres8" />
+
+            <ImageView
+                android:id="@+id/imgPt9"
+                android:layout_width="89dp"
+                android:layout_height="123dp"
+                android:layout_alignTop="@+id/imgPt8Argentina"
+                android:layout_marginStart="11dp"
+                android:layout_marginLeft="11dp"
+                android:layout_toEndOf="@+id/imgPt8Argentina"
+                android:layout_toRightOf="@+id/imgPt8Argentina"
+                android:src="@drawable/puzzleres9" />
 
         </RelativeLayout>
     </HorizontalScrollView>
 
     <ImageView
         android:id="@+id/cuadroBlanco1"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
+        android:layout_width="89dp"
+        android:layout_height="123dp"
         android:layout_alignLeft="@+id/Pt1Colombia"
         android:layout_alignStart="@+id/Pt1Colombia"
         android:layout_alignTop="@+id/Pt1Colombia"
-        app:srcCompat="@drawable/imagen9" />
+        app:srcCompat="@drawable/puzzle1" />
 
     <ImageView
         android:id="@+id/cuadroBlanco2"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
+        android:layout_width="89dp"
+        android:layout_height="123dp"
         android:layout_alignTop="@+id/cuadroBlanco1"
         android:layout_toEndOf="@+id/cuadroBlanco1"
         android:layout_toRightOf="@+id/cuadroBlanco1"
-        app:srcCompat="@drawable/imagen9" />
+        app:srcCompat="@drawable/puzzle2" />
 
     <ImageView
         android:id="@+id/cuadroBlanco3"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
+        android:layout_width="89dp"
+        android:layout_height="123dp"
         android:layout_alignTop="@+id/cuadroBlanco2"
         android:layout_toEndOf="@+id/cuadroBlanco2"
         android:layout_toRightOf="@+id/cuadroBlanco2"
-        app:srcCompat="@drawable/imagen9" />
+        app:srcCompat="@drawable/puzzle3" />
 
     <ImageView
         android:id="@+id/cuadroBlanco4"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
+        android:layout_width="89dp"
+        android:layout_height="123dp"
         android:layout_alignLeft="@+id/cuadroBlanco1"
         android:layout_alignStart="@+id/cuadroBlanco1"
         android:layout_below="@+id/cuadroBlanco1"
-        app:srcCompat="@drawable/imagen9" />
+        app:srcCompat="@drawable/puzzle4" />
 
     <ImageView
         android:id="@+id/cuadroBlanco5"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
+        android:layout_width="89dp"
+        android:layout_height="123dp"
         android:layout_below="@+id/cuadroBlanco1"
         android:layout_toEndOf="@+id/cuadroBlanco4"
         android:layout_toRightOf="@+id/cuadroBlanco4"
-        app:srcCompat="@drawable/imagen9" />
+        app:srcCompat="@drawable/puzzle5" />
 
     <ImageView
         android:id="@+id/cuadroBlanco6"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
+        android:layout_width="89dp"
+        android:layout_height="123dp"
         android:layout_below="@+id/cuadroBlanco3"
         android:layout_toEndOf="@+id/cuadroBlanco5"
         android:layout_toRightOf="@+id/cuadroBlanco5"
-        app:srcCompat="@drawable/imagen9" />
+        app:srcCompat="@drawable/puzzle6" />
 
     <ImageView
         android:id="@+id/cuadroBlanco7"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
+        android:layout_width="89dp"
+        android:layout_height="123dp"
         android:layout_alignLeft="@+id/cuadroBlanco4"
         android:layout_alignStart="@+id/cuadroBlanco4"
         android:layout_below="@+id/cuadroBlanco4"
-        app:srcCompat="@drawable/parte9" />
+        app:srcCompat="@drawable/puzzle7" />
 
     <ImageView
         android:id="@+id/cuadroBlanco8"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
+        android:layout_width="89dp"
+        android:layout_height="123dp"
         android:layout_below="@+id/cuadroBlanco5"
         android:layout_toEndOf="@+id/Pt7Chile"
         android:layout_toRightOf="@+id/Pt7Chile"
-        app:srcCompat="@drawable/parte9" />
+        app:srcCompat="@drawable/puzzle8" />
 
     <ImageView
         android:id="@+id/cuadroBlanco9"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
+        android:layout_width="89dp"
+        android:layout_height="123dp"
         android:layout_below="@+id/cuadroBlanco5"
         android:layout_toEndOf="@+id/cuadroBlanco8"
         android:layout_toRightOf="@+id/cuadroBlanco8"
-        app:srcCompat="@drawable/parte9" />
+        app:srcCompat="@drawable/puzzle9" />
 
     <ImageView
         android:id="@+id/Pt1Colombia"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_width="89dp"
+        android:layout_height="123dp"
         android:layout_below="@+id/textView"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
         android:layout_marginTop="21dp"
-        android:src="@drawable/parte1"
+        android:src="@drawable/puzzleres1"
         android:visibility="invisible" />
 
     <ImageView
         android:id="@+id/Pt2Venezuela"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
+        android:layout_width="89dp"
+        android:layout_height="123dp"
         android:layout_alignTop="@+id/Pt1Colombia"
         android:layout_toEndOf="@+id/Pt1Colombia"
         android:layout_toRightOf="@+id/Pt1Colombia"
-        android:src="@drawable/parte2"
+        android:src="@drawable/puzzleres2"
         android:visibility="invisible" />
 
     <ImageView
         android:id="@+id/Pt3Guyanas"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
+        android:layout_width="89dp"
+        android:layout_height="123dp"
         android:layout_alignTop="@+id/Pt2Venezuela"
         android:layout_toEndOf="@+id/Pt2Venezuela"
         android:layout_toRightOf="@+id/Pt2Venezuela"
-        android:src="@drawable/parte3"
+        android:src="@drawable/puzzleres3"
         android:visibility="invisible" />
 
     <ImageView
         android:id="@+id/Pt4Peru"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
+        android:layout_width="89dp"
+        android:layout_height="123dp"
         android:layout_alignLeft="@+id/cuadroBlanco1"
         android:layout_alignStart="@+id/cuadroBlanco1"
         android:layout_below="@+id/cuadroBlanco1"
-        android:src="@drawable/parte4"
+        android:src="@drawable/puzzleres4"
         android:visibility="invisible" />
 
     <ImageView
         android:id="@+id/Pt5Bolivia"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
+        android:layout_width="89dp"
+        android:layout_height="123dp"
         android:layout_below="@+id/cuadroBlanco2"
         android:layout_toEndOf="@+id/cuadroBlanco4"
         android:layout_toRightOf="@+id/cuadroBlanco4"
-        android:src="@drawable/parte5"
+        android:src="@drawable/puzzleres5"
         android:visibility="invisible" />
 
     <ImageView
         android:id="@+id/Pt6Brasil"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
+        android:layout_width="89dp"
+        android:layout_height="123dp"
         android:layout_below="@+id/cuadroBlanco3"
         android:layout_toEndOf="@+id/cuadroBlanco5"
         android:layout_toRightOf="@+id/cuadroBlanco5"
-        android:src="@drawable/parte6"
+        android:src="@drawable/puzzleres6"
         android:visibility="invisible" />
 
     <ImageView
         android:id="@+id/Pt7Chile"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
+        android:layout_width="89dp"
+        android:layout_height="123dp"
         android:layout_alignLeft="@+id/cuadroBlanco4"
         android:layout_alignStart="@+id/cuadroBlanco4"
         android:layout_below="@+id/cuadroBlanco4"
-        android:src="@drawable/parte7"
+        android:src="@drawable/puzzleres7"
         android:visibility="invisible" />
 
     <ImageView
         android:id="@+id/Pt8Argentina"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
+        android:layout_width="89dp"
+        android:layout_height="123dp"
         android:layout_below="@+id/cuadroBlanco5"
         android:layout_toEndOf="@+id/Pt7Chile"
         android:layout_toRightOf="@+id/Pt7Chile"
-        android:src="@drawable/parte8"
+        android:src="@drawable/puzzleres8"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/Pt9nn"
+        android:layout_width="89dp"
+        android:layout_height="123dp"
+        android:layout_below="@+id/cuadroBlanco6"
+        android:layout_toEndOf="@+id/Pt8Argentina"
+        android:layout_toRightOf="@+id/Pt8Argentina"
+        android:src="@drawable/puzzleres9"
         android:visibility="invisible" />
 
 </RelativeLayout>
