@@ -12,8 +12,8 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="como_quieres_interactuar_con_la_informaci_n">¿Como Quieres Interactuar con la Información?</string>
-    <string name="btnSR">Sin Realidad Aumentada</string>
+    <string name="como_quieres_interactuar_con_la_informaci_n">Interactua con la Información</string>
+    <string name="btnSR">INICIAR</string>
     <string name="btnAR">Realidad Aumentada</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -124,20 +124,21 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+    <string name="title_activity_interactivo">Interactivo</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_info">Info</string>
     <string name="antigua_y_barbuda">Antigua y Barbuda</string>
     <string name="contenido_txt1">EXTENSIÓN TERRITORIAL: 440 Kilometros Cuadrados\nPOBLACIÓN: 100.963 personas aproximadamente\nCAPITAL: Saint John\nIDIOMA: Su idioma oficial es el inglés</string>
-    <string name="title_activity_interactivo">Interactivo</string>
-    <string name="contenido_txt2">EXTENSIÓN TERRITORIAL: 2.78 Millones de Kilometros Cuadrados\nPOBLACIÓN: 43.85 millones de personas aproximadamente\nCAPITAL: Buenos Aires\nIDIOMA: Su idioma oficial es el español</string>
     <string name="argentina">Argentina</string>
-    <string name="contenido_txt3">EXTENSIÓN TERRITORIAL: 13.878 Kilometros Cuadrados\nPOBLACIÓN: 391.232 personas aproximadamente\nCAPITAL: Nasáu\nIDIOMA: Su idioma oficial es el inglés</string>
+    <string name="contenido_txt2">EXTENSIÓN TERRITORIAL: 2.78 Millones de Kilometros Cuadrados\nPOBLACIÓN: 43.85 millones de personas aproximadamente\nCAPITAL: Buenos Aires\nIDIOMA: Su idioma oficial es el español</string>
     <string name="bahamas">Bahamas</string>
+    <string name="contenido_txt3">EXTENSIÓN TERRITORIAL: 13.878 Kilometros Cuadrados\nPOBLACIÓN: 391.232 personas aproximadamente\nCAPITAL: Nasáu\nIDIOMA: Su idioma oficial es el inglés</string>
     <string name="barbados">Barbados</string>
     <string name="contenido_txt4">EXTENSIÓN TERRITORIAL: 431 Kilometros Cuadrados\nPOBLACIÓN: 284.996 personas aproximadamente\nCAPITAL: Bridgetown\nIDIOMA: Su idioma oficial es el inglés</string>
     <string name="belice">Belice</string>
     <string name="contenido_txt5">EXTENSIÓN TERRITORIAL: 22.966 Kilometros Cuadrados\nPOBLACIÓN: 366.954 personas aproximadamente\nCAPITAL: Belmopán\nIDIOMA: Su idioma oficial es el inglés</string>
     <string name="bolivia">Bolivia</string>
+    <string name="contenido_txt6">EXTENSIÓN TERRITORIAL: 1.099 Millones de Kilometros Cuadrados\nPOBLACIÓN: 10.89 millones de personas aproximadamente\nCAPITAL: La Paz\nIDIOMA: Su idioma oficial es el español seguido del quechua y el aimara</string>
     <string name="brasil">Brasil</string>
     <string name="contenido_txt7">EXTENSIÓN TERRITORIAL: 8.516 Millones de Kilometros Cuadrados\nPOBLACIÓN: 207.7 millones de personas aproximadamente\nCAPITAL: Brasilia\nIDIOMA: Su idioma oficial es el portugués</string>
     <string name="canada">Canadá</string>
@@ -154,8 +155,8 @@
     <string name="contenido_txt13">EXTENSIÓN TERRITORIAL: 750 Kilometros Cuadrados\nPOBLACIÓN: 73.543 personas aproximadamente\nCAPITAL: Roseau\nIDIOMA: Su idioma oficial es el inglés</string>
     <string name="ecuador">Ecuador</string>
     <string name="contenido_txt14">EXTENSIÓN TERRITORIAL: 283.560 Kilometros Cuadrados\nPOBLACIÓN: 16.39 millones de personas aproximadamente\nCAPITAL: Quito\nIDIOMA: Su idioma oficial es el español</string>
-    <string name="contenido_txt15">EXTENSIÓN TERRITORIAL: 21.041 Kilometros Cuadrados\nPOBLACIÓN: 6.345 millones de personas aproximadamente\nCAPITAL: San Salvador\nIDIOMA: Su idioma oficial es el español</string>
     <string name="el_salvador">El Salvador</string>
+    <string name="contenido_txt15">EXTENSIÓN TERRITORIAL: 21.041 Kilometros Cuadrados\nPOBLACIÓN: 6.345 millones de personas aproximadamente\nCAPITAL: San Salvador\nIDIOMA: Su idioma oficial es el español</string>
     <string name="estados_unidos">Estados Unidos</string>
     <string name="contenido_txt16">EXTENSIÓN TERRITORIAL: 9.834 Millones de Kilometros Cuadrados\nPOBLACIÓN: 323.1 millones de personas aproximadamente\nCAPITAL: Washington\nIDIOMA: Su idioma oficial es el inglés</string>
     <string name="granada">Granada</string>
@@ -192,12 +193,10 @@
     <string name="contenido_txt32">EXTENSIÓN TERRITORIAL: 163.821 Kilometros Cuadrados\nPOBLACIÓN: 558.368 personas aproximadamente\nCAPITAL: Paramaribo\nIDIOMA: Su idioma oficial es el neerlandés</string>
     <string name="trinidad_y_tobago">Trinidad y Tobago</string>
     <string name="contenido_txt33">EXTENSIÓN TERRITORIAL: 5.131 Kilometros Cuadrados\nPOBLACIÓN: 1.365 millones de personas aproximadamente\nCAPITAL: Puerto España\nIDIOMA: Su idioma oficial es el inglés</string>
-    <string name="contenido_txt34">EXTENSIÓN TERRITORIAL: 176.215 Kilometros Cuadrados\nPOBLACIÓN: 3.444 millones de personas aproximadamente\nCAPITAL: Montevideo\nIDIOMA: idioma oficial es el español</string>
     <string name="uruguay">Uruguay</string>
+    <string name="contenido_txt34">EXTENSIÓN TERRITORIAL: 176.215 Kilometros Cuadrados\nPOBLACIÓN: 3.444 millones de personas aproximadamente\nCAPITAL: Montevideo\nIDIOMA: idioma oficial es el español</string>
     <string name="venezuela">Venezuela</string>
     <string name="contenido_txt35">EXTENSIÓN TERRITORIAL: 916.445 Kilometros Cuadrados\nPOBLACIÓN: 31.57 millones de personas aproximadamente\nCAPITAL: Caracas\nIDIOMA: idioma oficial es el español</string>
-    <string name="contenido_txt">EXTENSIÓN TERRITORIAL: 1.099 Millones de Kilometros Cuadrados\nPOBLACIÓN: 10.89 millones de personas aproximadamente\nCAPITAL: La Paz\nIDIOMA: Su idioma oficial es el español seguido del quechua y el aimara</string>
-    <string name="contenido_txt6">EXTENSIÓN TERRITORIAL: 1.099 Millones de Kilometros Cuadrados\nPOBLACIÓN: 10.89 millones de personas aproximadamente\nCAPITAL: La Paz\nIDIOMA: Su idioma oficial es el español seguido del quechua y el aimara</string>
     <string name="todo">TODO</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_menu_interactivo">MenuInteractivo</string>
