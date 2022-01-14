@@ -13,9 +13,9 @@ import android.widget.ImageView;
 
 public class PuzzleNorte extends AppCompatActivity {
 
-    ImageView c1, c2, c3, c4, c5, c6, c7, c8, c9,
-            img1, img2, img3, img4, img5, img6, img7, img8, img9,
-            imgP1, imgP2, imgP3, imgP4, imgP5, imgP6, imgP7, imgP8, imgP9;
+    ImageView c1, c2, c4, c5, c6, c7, c8, c9,
+            img1, img2, img4, img5, img6, img7, img8, img9,
+            imgP1, imgP2, imgP4, imgP5, imgP6, imgP7, imgP8, imgP9;
     int acum=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +23,6 @@ public class PuzzleNorte extends AppCompatActivity {
         setContentView(R.layout.puzzlenorte);
         c1 = findViewById(R.id.cBlanco1);
         c2 = findViewById(R.id.cBlanco2);
-        c3 = findViewById(R.id.cBlanco3);
         c4 = findViewById(R.id.cBlanco4);
         c5 = findViewById(R.id.cBlanco5);
         c6 = findViewById(R.id.cBlanco6);
@@ -34,8 +33,6 @@ public class PuzzleNorte extends AppCompatActivity {
         imgP1 = findViewById(R.id.Pt1);
         img2 = findViewById(R.id.imgPt2);
         imgP2 =findViewById(R.id.Pt2);
-        img3 = findViewById(R.id.imgPt3);
-        imgP3= findViewById(R.id.Pt3);
         img4 = findViewById(R.id.imgPt4);
         imgP4 = findViewById(R.id.Pt4);
         img5 = findViewById(R.id.imgPt5);
@@ -50,7 +47,6 @@ public class PuzzleNorte extends AppCompatActivity {
         imgP9 = findViewById(R.id.Pt9);
         img1.setOnTouchListener(new ChoiceTouchListener());
         img2.setOnTouchListener(new ChoiceTouchListener());
-        img3.setOnTouchListener(new ChoiceTouchListener());
         img4.setOnTouchListener(new ChoiceTouchListener());
         img5.setOnTouchListener(new ChoiceTouchListener());
         img6.setOnTouchListener(new ChoiceTouchListener());
@@ -59,7 +55,6 @@ public class PuzzleNorte extends AppCompatActivity {
         img9.setOnTouchListener(new ChoiceTouchListener());
         c1.setOnDragListener(new ChoiceDragListener());
         c2.setOnDragListener(new ChoiceDragListener());
-        c3.setOnDragListener(new ChoiceDragListener());
         c4.setOnDragListener(new ChoiceDragListener());
         c5.setOnDragListener(new ChoiceDragListener());
         c6.setOnDragListener(new ChoiceDragListener());
@@ -105,13 +100,6 @@ public class PuzzleNorte extends AppCompatActivity {
                             if (view == img2) {
                                 c2.setVisibility(View.INVISIBLE);
                                 imgP2.setVisibility(View.VISIBLE);
-                                ((ImageView) view).setImageDrawable(null);
-                                acum++;
-                            }
-                        }if (v == c3) {
-                            if (view == img3) {
-                                c3.setVisibility(View.INVISIBLE);
-                                imgP3.setVisibility(View.VISIBLE);
                                 ((ImageView) view).setImageDrawable(null);
                                 acum++;
                             }
@@ -163,7 +151,7 @@ public class PuzzleNorte extends AppCompatActivity {
             case DragEvent.ACTION_DRAG_ENDED:
                 break;
             }
-            if(acum==9){
+            if(acum==8){
                 finalizarN();
             }
             return true;
