@@ -26,12 +26,12 @@
 
     <TextView
         android:id="@+id/txtContenido1"
-        android:layout_width="300dp"
-        android:layout_height="200dp"
+        android:layout_width="343dp"
+        android:layout_height="234dp"
         android:layout_below="@+id/antigua"
         android:layout_centerHorizontal="true"
         android:text="@string/contenido_txt1"
         android:textColor="@android:color/black"
-        android:textSize="20sp" />
+        android:textSize="20sp"/>
 
 </RelativeLayout>

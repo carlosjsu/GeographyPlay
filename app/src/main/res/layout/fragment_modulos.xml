@@ -22,18 +22,17 @@
         android:textStyle="bold"
         android:gravity="center_horizontal" />
 
+
     <ImageButton
         android:id="@+id/btnSR"
-        android:layout_width="130dp"
-        android:layout_height="150dp"
+        android:layout_width="169dp"
+        android:layout_height="147dp"
         android:layout_below="@+id/textView"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="135dp"
-        android:layout_marginTop="174dp"
-        android:layout_marginEnd="135dp"
-        android:layout_marginBottom="288dp"
+        android:layout_marginStart="121dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="121dp"
         android:background="@drawable/btnexplora"
         android:fontFamily="@font/aclonica"
         android:text="@string/btnSR"
@@ -43,16 +42,16 @@
 
     <TextView
         android:id="@+id/textBtnSAR"
-        android:layout_width="130dp"
-        android:layout_height="90dp"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
         android:layout_alignStart="@+id/btnSR"
         android:layout_alignTop="@+id/btnSR"
         android:layout_alignEnd="@+id/btnSR"
         android:layout_alignBottom="@+id/btnSR"
         android:layout_marginStart="3dp"
-        android:layout_marginTop="83dp"
-        android:layout_marginEnd="-1dp"
-        android:layout_marginBottom="-23dp"
+        android:layout_marginTop="81dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="11dp"
         android:fontFamily="@font/aclonica"
         android:gravity="center_horizontal"
         android:text="@string/btnSR"
@@ -60,4 +59,20 @@
         android:textColor="@android:color/black"
         android:textSize="20sp"
         android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/txtContent"
+        android:layout_width="wrap_content"
+        android:layout_height="121dp"
+        android:layout_below="@+id/btnSR"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="71dp"
+        android:layout_marginEnd="28dp"
+        android:gravity="center_horizontal"
+        android:text="@string/txtDescPaises"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 </RelativeLayout>
