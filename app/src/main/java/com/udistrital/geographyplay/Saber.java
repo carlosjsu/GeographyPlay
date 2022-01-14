@@ -1,5 +1,6 @@
 package com.udistrital.geographyplay;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,21 +10,19 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+
 import java.util.Random;
 
 public class Saber extends AppCompatActivity {
 
-    final String[] Preguntas = {"¿Cuál es la capital de Guatemala?;Escuintla;*Ciudad de Guatemala;Puerto Barrios;Jutiapa",
-            "¿Qué país tiene un águila en su bandera?;Guyana;Haití;Surinam;*México",
-            "¿Qué país posee una extensión de 756.102 kilómetros cuadrados?;Canadá;Costa Rica;*Chile;Uruguay",
-            "¿Qué país de américa del sur tiene un sol en su bandera?;México;*Argentina;Surinam;Ninguna de las anteriores",
-            "Bahamas posee una cantidad de habitantes de:;*391.232 personas;301.000 personas;12 millones de personas;3912 personas ;1 millon de personas",
-            "¿Cuál es la capital de Brasil?;Bogotá;Honduras;Sao pablo;*Brasilia",
-            "¿Cuál es el segundo idioma más hablado en Canadá?;Español;Portugués;*Frances;Inglés",
-            "Ecuador tiene su __ en su bandera;Planeta;*Escudo;Capital;No tiene nada en la bandera",
-            "¿Qué país posee en su bandera amarillo, azul y rojo?;*Colombia;Brasil;Panamá;Haití",
-            "¿En cuál país se habla español?;Santa Lucía;*Perú;Trinidad y Tobago;Jamaica",
-            "¿Cuantos continentes hay en la tierra?;Seis;Cuatro;*Cinco;Tres"};
+    private FirebaseFirestore mDataBase;
+
+    private String[] preguntas = new String[17];
     private int ids_Respuestas[]={
             R.id.Respuesta1,R.id.Respuesta2,R.id.Respuesta3,R.id.Respuesta4
     };
@@ -39,18 +38,36 @@ public class Saber extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.saber);
+        mDataBase = FirebaseFirestore.getInstance();
 
         Pregunta =(TextView) findViewById(R.id.Text_Pregunta);
         grupo= (RadioGroup) findViewById(R.id.grupo) ;
         btnResponder =(Button) findViewById(R.id.btn_Responder);
         NPregunta =(TextView) findViewById(R.id.Np);
         Random generadorAleatorios = new Random();
-        final int numeroAleatorio = 0+generadorAleatorios.nextInt(11);
+        final int numeroAleatorio = 0+generadorAleatorios.nextInt(17);
         pregunta_actual= numeroAleatorio;
         Total_Preguntas++;
-        Mostrar_Preguntas();
-
         Repe[0]=numeroAleatorio;
+
+        mDataBase.collection("Preguntas").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>(){
+
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if (task.isSuccessful()) {
+                    int i = 0;
+                    for (QueryDocumentSnapshot document : task.getResult()) {
+                        preguntas[i] = document.getData().get("pregunta").toString()
+                        + ";" + "*" + document.getData().get("respuestaC").toString()
+                        + ";" + document.getData().get("respuestaI1").toString()
+                        + ";" + document.getData().get("respuestaI2").toString()
+                        + ";" + document.getData().get("respuestaI3").toString();
+                        i++;
+                    }
+                    Mostrar_Preguntas();
+                }
+            }
+        });
 
         btnResponder.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,8 +123,8 @@ public class Saber extends AppCompatActivity {
     }
 
     private void Mostrar_Preguntas() {
-        String P= Preguntas[pregunta_actual];
-        String[] partes= P.split(";");
+        String pregunta = preguntas[pregunta_actual];
+        String[] partes= pregunta.split(";");
         grupo.clearCheck();
         Pregunta.setText(partes[0]);
         NPregunta.setText("Pregunta: "+Total_Preguntas);
