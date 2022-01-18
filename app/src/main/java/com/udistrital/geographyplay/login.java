@@ -44,6 +44,7 @@ public class login extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private static final String AES = "AES";
     private FirebaseFirestore mDataBase;
+    private Button recuperar;
 
     @Override
     protected void onCreate (Bundle savedInstanceState){
@@ -54,6 +55,8 @@ public class login extends AppCompatActivity {
         email = findViewById(R.id.email);
         pasword = findViewById(R.id.pasword);
         registrarse=(Button)findViewById(R.id.registro);
+        recuperar=(Button)findViewById(R.id.recuperar);
+        login=(Button)findViewById(R.id.login);
         registrarse.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -61,7 +64,6 @@ public class login extends AppCompatActivity {
                 startActivity(registrarse);
             }
         });
-        login=(Button)findViewById(R.id.login);
         login.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -71,6 +73,13 @@ public class login extends AppCompatActivity {
                     Toast.makeText(login.this, "Por favor diligencie los campos email y contraseña",
                             Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+        recuperar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent recuperar = new Intent(login.this, RecuperarClave.class);
+                startActivity(recuperar);
             }
         });
     }

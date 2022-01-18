@@ -1,5 +1,6 @@
 package com.udistrital.geographyplay;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Base64;
@@ -46,6 +47,7 @@ public class registrarse extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseFirestore mDataBase;
     private static final String AES = "AES";
+    private ProgressDialog mDialog;
 
     protected void onCreate (Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -56,6 +58,7 @@ public class registrarse extends AppCompatActivity {
         pasword = findViewById(R.id.contraseniaRegistro);
         user = findViewById(R.id.usuarioRegistro);
         registrarse = findViewById(R.id.btnRegistro);
+        mDialog = new ProgressDialog(this);
         registrarse.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -66,6 +69,9 @@ public class registrarse extends AppCompatActivity {
                     Toast.makeText(registrarse.this, "La contraseña debe tener al menos 6 caracteres", Toast.LENGTH_SHORT).show();
                 }else{
                     try {
+                        mDialog.setMessage("Espere un momento.....");
+                        mDialog.setCanceledOnTouchOutside(false);
+                        mDialog.show();
                         registro();
                     } catch (Exception e) {
                         e.printStackTrace();
@@ -90,14 +96,15 @@ public class registrarse extends AppCompatActivity {
                             map.put("email", email.getText().toString());
                             map.put("password", passEncrip);
                             map.put("app",stringKey);
-
-
+                            mDialog.dismiss();
                             mDataBase.collection("Users").document(id).set(map).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void unused) {
                                     try {
-                                        Toast.makeText(registrarse.this, "Autenticación satisfactoria: ",
+                                        Toast.makeText(registrarse.this, "Registro satisfactorio: ",
                                                 Toast.LENGTH_SHORT).show();
+                                        Intent menu = new Intent(registrarse.this, MainActivity.class);
+                                        startActivity(menu);
                                     } catch (Exception e) {
                                         e.printStackTrace();
                                     }
