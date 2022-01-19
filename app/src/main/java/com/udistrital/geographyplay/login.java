@@ -45,6 +45,7 @@ public class login extends AppCompatActivity {
     private static final String AES = "AES";
     private FirebaseFirestore mDataBase;
     private Button recuperar;
+    private Boolean bandera = false;
 
     @Override
     protected void onCreate (Bundle savedInstanceState){
@@ -102,6 +103,9 @@ public class login extends AppCompatActivity {
                                 }
                             }
                             validateLogin(passEncrip[0]);
+                            if(bandera) {
+                                validateLogin(pasword.getText().toString());
+                            }
                         } else {
                             Log.e("", "Error getting documents: ", task.getException());
                         }
@@ -127,8 +131,12 @@ public class login extends AppCompatActivity {
                             Intent menu = new Intent(login.this, MainActivity.class);
                             startActivity(menu);
                         }else{
-                            Toast.makeText(login.this, "Correo y/o contraseña incorrecta",
-                                    Toast.LENGTH_SHORT).show();
+                            if(bandera) {
+                                Toast.makeText(login.this, "Correo y/o contraseña incorrecta",
+                                        Toast.LENGTH_SHORT).show();
+                            }else {
+                                bandera = true;
+                            }
                         }
 
                     }
