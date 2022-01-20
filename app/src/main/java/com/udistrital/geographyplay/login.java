@@ -1,6 +1,7 @@
 package com.udistrital.geographyplay;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Base64;
@@ -46,6 +47,7 @@ public class login extends AppCompatActivity {
     private FirebaseFirestore mDataBase;
     private Button recuperar;
     private Boolean bandera = false;
+    private ProgressDialog mDialog;
 
     @Override
     protected void onCreate (Bundle savedInstanceState){
@@ -58,6 +60,7 @@ public class login extends AppCompatActivity {
         registrarse=(Button)findViewById(R.id.registro);
         recuperar=(Button)findViewById(R.id.recuperar);
         login=(Button)findViewById(R.id.login);
+        mDialog = new ProgressDialog(this);
         registrarse.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -68,9 +71,13 @@ public class login extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                mDialog.setMessage("Espere un momento.....");
+                mDialog.setCanceledOnTouchOutside(false);
+                mDialog.show();
                 if(!email.getText().toString().isEmpty() && !pasword.getText().toString().isEmpty()){
                     login();
                 }else{
+                    mDialog.dismiss();
                     Toast.makeText(login.this, "Por favor diligencie los campos email y contraseña",
                             Toast.LENGTH_SHORT).show();
                 }
@@ -103,9 +110,7 @@ public class login extends AppCompatActivity {
                                 }
                             }
                             validateLogin(passEncrip[0]);
-                            if(bandera) {
-                                validateLogin(pasword.getText().toString());
-                            }
+
                         } else {
                             Log.e("", "Error getting documents: ", task.getException());
                         }
@@ -131,14 +136,16 @@ public class login extends AppCompatActivity {
                             Intent menu = new Intent(login.this, MainActivity.class);
                             startActivity(menu);
                         }else{
-                            if(bandera) {
+                            if(!bandera) {
+                                bandera = true;
+                                validateLogin(pasword.getText().toString());
+                            }else{
+                                mDialog.dismiss();
                                 Toast.makeText(login.this, "Correo y/o contraseña incorrecta",
                                         Toast.LENGTH_SHORT).show();
-                            }else {
-                                bandera = true;
                             }
-                        }
 
+                        }
                     }
                 });
     }
