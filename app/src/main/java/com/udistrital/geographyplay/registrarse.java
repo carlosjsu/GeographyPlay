@@ -14,21 +14,16 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.nio.charset.StandardCharsets;
-import java.security.MessageDigest;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Pattern;
@@ -153,12 +148,12 @@ public class registrarse extends AppCompatActivity {
         return mensajeEncrip;
     }
 
-    private String desEncriptar(SecretKeySpec secretKeySpec, String mensaje) throws Exception {
+    /*private String desEncriptar(SecretKeySpec secretKeySpec, String mensaje) throws Exception {
         Cipher cipher = Cipher.getInstance(AES);
         cipher.init(Cipher.DECRYPT_MODE,secretKeySpec);
         byte[] mensajeDeco = Base64.decode(mensaje, Base64.DEFAULT);
         byte[] mensajeByte = cipher.doFinal(mensajeDeco);
         String mensajeDes = new String(mensajeByte);
         return mensajeDes;
-    }
+    }*/
 }
