@@ -24,6 +24,7 @@ public class MenuJuegos extends Fragment {
     Button memorama;
     Button puzle;
     Button preguntas;
+    Button online;
     private Context mContext;
     @Override
     public void onAttach(Context context) {
@@ -41,6 +42,7 @@ public class MenuJuegos extends Fragment {
         // Inflate the layout for this fragment
         vista = inflater.inflate(R.layout.fragment_menu_juegos, container, false);
         memorama=(Button)  vista.findViewById(R.id.btnConcentrese);
+        online =(Button)  vista.findViewById(R.id.btnOnline);
         memorama.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,6 +63,13 @@ public class MenuJuegos extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(),Saber.class);
+                startActivity(intent);
+            }
+        });
+        online.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),Conexion.class);
                 startActivity(intent);
             }
         });
