@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/azul"
+    android:orientation="vertical"
     tools:context=".Conexion">
 
     <Button
@@ -23,7 +24,10 @@
         android:layout_height="300dp"
         android:layout_marginTop="76dp"
         app:layout_constraintTop_toTopOf="@+id/botonEmparejar"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="0dp" >
+
+
+    </ListView>
 
     <Button
         android:id="@+id/btnEscuchar"
@@ -46,35 +50,98 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/mensaje"
-        android:layout_width="337dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:text="Mensaje"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lista" />
-
-    <EditText
-        android:id="@+id/escritura"
-        android:layout_width="184dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginBottom="52dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Escribir"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnEnviar"
+        android:id="@+id/Np"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginBottom="56dp"
-        android:text="Enviar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/escritura" />
+        android:layout_below="@+id/botonEmparejar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="100dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="10dp" />
+
+    <TextView
+        android:id="@+id/Text_Pregunta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Np"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:text="TextView"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:textColor="@android:color/background_dark"
+        android:textSize="28sp"
+        app:layout_constraintTop_toBottomOf="@+id/Np"
+        tools:layout_editor_absoluteX="10dp" />
+
+    <View
+        android:id="@+id/ruler"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/Text_Pregunta"
+        android:background="#7a353434"
+        app:layout_constraintTop_toBottomOf="@+id/Text_Pregunta"
+        tools:layout_editor_absoluteX="-44dp"
+        android:layout_marginTop="10dp"/>
+
+    <RadioGroup
+        android:id="@+id/grupo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ruler"
+        android:layout_alignStart="@+id/ruler"
+        android:layout_alignLeft="@+id/ruler"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/ruler"
+        tools:layout_editor_absoluteX="10dp">
+
+        <RadioButton
+            android:id="@+id/Respuesta1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="RadioButton"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/Respuesta2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="RadioButton"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/Respuesta3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="RadioButton"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/Respuesta4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="RadioButton"
+            android:textSize="16sp" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="50dp"
+        android:text="time"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
