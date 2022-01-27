@@ -1,36 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <ImageView
-        android:id="@+id/panama"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_below="@+id/txtTitulo25"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/margen"
-        android:src="@drawable/panama" />
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/txtTitulo25"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="41dp"
+        android:layout_width="120dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.0625"
+        android:layout_gravity="center"
         android:text="@string/panama"
         android:textColor="@android:color/black"
-        android:textSize="25sp" />
+        android:textSize="30sp"/>
+
+    <ImageView
+        android:id="@+id/panama"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.25"
+        android:src="@drawable/panama"/>
 
     <TextView
         android:id="@+id/txtContenido25"
-        android:layout_width="343dp"
-        android:layout_height="234dp"
-        android:layout_below="@+id/panama"
-        android:layout_centerHorizontal="true"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.525"
         android:text="@string/contenido_txt25"
-        android:textColor="@android:color/black"
-        android:textSize="20sp" />
+        android:textSize="25sp"/>
 
-</RelativeLayout>
+    <ImageButton
+        android:id="@+id/ibtnPanama"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.125"
+        android:src="@drawable/sound"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

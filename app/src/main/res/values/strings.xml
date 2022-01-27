@@ -175,7 +175,7 @@
     <string name="nicaragua">Nicaragua</string>
     <string name="contenido_txt24">NOMBRE OFICIAL: República de Nicaragua.\nEXTENSIÓN TERRITORIAL: 130.375 Kilómetros Cuadrados\nPOBLACIÓN: 6.15 millones de personas aproximadamente\nCAPITAL: Managua\nIDIOMA: Su idioma oficial es el Español\nGENTILICIO: Nicaragüense\nMONEDA: Córdoba</string>
     <string name="panama">Panamá</string>
-    <string name="contenido_txt25">NOMBRE OFICIAL: República de Panamá.\nEXTENSIÓN TERRITORIAL: 74.177 Kilómetros Cuadrados\nPOBLACIÓN: 4.034 millones de personas aproximadamente\nCAPITAL: Panamá\nIDIOMA: Su idioma oficial es el Español\nGENTILICIO: Panameño/a\nMONEDA: Balboa y Dólar Estadounidese</string>
+    <string name="contenido_txt25">NOMBRE OFICIAL: República de Panamá.\nEXTENSIÓN TERRITORIAL: 74.177 Kilómetros Cuadrados\nPOBLACIÓN: 4.034 millones de personas aproximadamente\nCAPITAL: Panamá\nIDIOMA: Su idioma oficial es el Español\nGENTILICIO: Panameño/a\nMONEDA: Balboa y Dólar Estadounidense</string>
     <string name="paraguay">Paraguay</string>
     <string name="contenido_txt26">NOMBRE OFICIAL: República del Paraguay.\nEXTENSIÓN TERRITORIAL: 406.752 Kilómetros Cuadrados\nPOBLACIÓN: 6.725 millones de personas aproximadamente\nCAPITAL: Asunción\nIDIOMA: Su idioma oficial es el Español\nGENTILICIO: Paraguayo/a\nMONEDA: Guaraní</string>
     <string name="peru">Perú</string>
@@ -193,9 +193,9 @@
     <string name="trinidad_y_tobago">Trinidad y Tobago</string>
     <string name="contenido_txt33">NOMBRE OFICIAL: República de Trinidad y Tobago.\nEXTENSIÓN TERRITORIAL: 5.131 Kilómetros Cuadrados\nPOBLACIÓN: 1.365 millones de personas aproximadamente\nCAPITAL: Puerto España\nIDIOMA: Su idioma oficial es el Inglés\nGENTILICIO: Trinitense\nMONEDA: Dólar Trinitense</string>
     <string name="uruguay">Uruguay</string>
-    <string name="contenido_txt34">NOMBRE OFICIAL: República Oriental del Uruguay.\nEXTENSIÓN TERRITORIAL: 176.215 Kilómetros Cuadrados\nPOBLACIÓN: 3.444 millones de personas aproximadamente\nCAPITAL: Montevideo\nIDIOMA: idioma oficial es el Español\nGENTILICIO: Uruguayo/a\nMONEDA: Peso Uruguayo</string>
+    <string name="contenido_txt34">NOMBRE OFICIAL: República Oriental del Uruguay.\nEXTENSIÓN TERRITORIAL: 176.215 Kilómetros Cuadrados\nPOBLACIÓN: 3.444 millones de personas aproximadamente\nCAPITAL: Montevideo\nIDIOMA: Su idioma oficial es el Español\nGENTILICIO: Uruguayo/a\nMONEDA: Peso Uruguayo</string>
     <string name="venezuela">Venezuela</string>
-    <string name="contenido_txt35">NOMBRE OFICIAL: República Bolivariana de Venezuela.\nEXTENSIÓN TERRITORIAL: 916.445 Kilómetros Cuadrados\nPOBLACIÓN: 31.57 millones de personas aproximadamente\nCAPITAL: Caracas\nIDIOMA: idioma oficial es el Español\nGENTILICIO: Venezolano/a\nMONEDA: Bolivar</string>
+    <string name="contenido_txt35">NOMBRE OFICIAL: República Bolivariana de Venezuela.\nEXTENSIÓN TERRITORIAL: 916.445 Kilómetros Cuadrados\nPOBLACIÓN: 31.57 millones de personas aproximadamente\nCAPITAL: Caracas\nIDIOMA: Su idioma oficial es el Español\nGENTILICIO: Venezolano/a\nMONEDA: Bolivar</string>
     <string name="todo">TODO</string>
     <string name="txtDescPaises">En este modulo encontrarás información sobre los países del continente americano\n¡Diviértete Aprendiendo!</string>
     <string name="section_format">Hello World from section: %1$d</string>
