@@ -65,7 +65,7 @@ public class Conexion extends AppCompatActivity {
     private int ids_Respuestas[] = {
             R.id.Respuesta1, R.id.Respuesta2, R.id.Respuesta3, R.id.Respuesta4
     };
-    private int Repe[] = {15, 15, 85, 98, 54, 69, 25, 50};
+    private int Repe[] = {23, 34, 85, 98, 54, 69, 25, 50};
     private int respuesta_correcta;
     private int Total_Preguntas = 0;
     private int pregunta_actual;
@@ -78,6 +78,7 @@ public class Conexion extends AppCompatActivity {
     int BLUETOOTH_HABILITADO = 1;
     private static final String APP_NAME = "GeographyPlayOnline";
     private static final UUID M_UIID = UUID.fromString("efb6c78c-7c45-11ec-90d6-0242ac120003");
+    private int totalScore = 0;
 
     //Generador uuid random UUID.randomUUID().toString()
     @Override
@@ -131,11 +132,7 @@ public class Conexion extends AppCompatActivity {
                 esperarYCerrar(MILISEGUNDOS_ESPERA);
             }
         });
-        Random generadorAleatorios = new Random();
-        final int numeroAleatorio = 0 + generadorAleatorios.nextInt(20);
-        pregunta_actual = numeroAleatorio;
-        Total_Preguntas++;
-        Repe[0] = numeroAleatorio;
+
 
         mDataBase.collection("Preguntas").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
 
@@ -191,12 +188,9 @@ public class Conexion extends AppCompatActivity {
         btArray = new BluetoothDevice[bt.size()];
         int index = 0;
         if (bt.size() > 0) {
-            Log.e("", "Entro if emparejamiento");
             for (BluetoothDevice device : bt) {
-                Log.e("", "Entro for emparejamiento: " + index);
                 btArray[index] = device;
                 lista[index] = device.getName();
-                Log.e("", "Entro for emparejamiento nombre: " + lista[index]);
                 index++;
             }
             ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(Conexion.this, android.R.layout.simple_list_item_1, lista);
@@ -230,13 +224,14 @@ public class Conexion extends AppCompatActivity {
                         botonEscuchar.setVisibility(View.INVISIBLE);
                         status.setVisibility(View.INVISIBLE);
                         listaDispositivos.setVisibility(View.INVISIBLE);
-                        mostrarPregunta();
+                        if (banPre) {
+                            cambiaPregunta();
+                        }
                         Pregunta.setVisibility(View.VISIBLE);
                         grupo.setVisibility(View.VISIBLE);
                         NPregunta.setVisibility(View.VISIBLE);
                         time.setVisibility(View.VISIBLE);
                         rule.setVisibility(View.VISIBLE);
-                        startTimer();
                     }
                     break;
             }
@@ -383,12 +378,12 @@ public class Conexion extends AppCompatActivity {
             }
             rb.setText(respuesta);
         }
-        if (Total_Preguntas == 6) {
-            //Finaliza el juego
-            Toast.makeText(Conexion.this, "Finalizo Juego", Toast.LENGTH_SHORT).show();
-        }
         timeInMillis = 10000;
         startTimer();
+      /*  if (Total_Preguntas == 6) {
+            //Finaliza el juego
+            Toast.makeText(Conexion.this, "Finalizo Juego", Toast.LENGTH_SHORT).show();
+        }*/
     }
 
     public void esperarYCerrar(int milisegundos) {
@@ -407,13 +402,14 @@ public class Conexion extends AppCompatActivity {
                         botonEscuchar.setVisibility(View.INVISIBLE);
                         status.setVisibility(View.INVISIBLE);
                         listaDispositivos.setVisibility(View.INVISIBLE);
-                        mostrarPregunta();
+                        if (banPre) {
+                            cambiaPregunta();
+                        }
                         Pregunta.setVisibility(View.VISIBLE);
                         grupo.setVisibility(View.VISIBLE);
                         NPregunta.setVisibility(View.VISIBLE);
                         time.setVisibility(View.VISIBLE);
                         rule.setVisibility(View.VISIBLE);
-                        startTimer();
                     }
                 });
                 builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -438,12 +434,16 @@ public class Conexion extends AppCompatActivity {
     }
 
     public void cambiaPregunta() {
-        Log.e("","Entro a cambiar pregunta: ");
+        Random generadorAleatorios = new Random();
+        int numeroAleatorio;
         if (banPre) {
+            numeroAleatorio = 0 + generadorAleatorios.nextInt(20);
+            pregunta_actual = numeroAleatorio;
+            Total_Preguntas++;
+            Repe[0] = numeroAleatorio;
             banPre = false;
             mostrarPregunta();
         } else {
-            Log.e("","Llego a cambiar la pregunta: "+Total_Preguntas);
             int id = grupo.getCheckedRadioButtonId();
             int respuesta = -1;
             for (int i = 0; i < ids_Respuestas.length; i++) {
@@ -451,33 +451,22 @@ public class Conexion extends AppCompatActivity {
                     respuesta = i;
                 }
             }
-                Random generadorAleatorios = new Random();
+            if (respuesta == respuesta_correcta) {
+                totalScore = totalScore *100 ;
+            }
                 if (Total_Preguntas < 6) {
-                    int numeroAleatorio = 0 + generadorAleatorios.nextInt(20);
-                    if (Repetidas(numeroAleatorio) == 1) {
-                        Total_Preguntas++;
-                        pregunta_actual = numeroAleatorio;
-                        Repe[Total_Preguntas] = numeroAleatorio;
-                        mostrarPregunta();
-                    } else {
-                        int numeroAleatorio1 = 0 + generadorAleatorios.nextInt(20);
-                        if (Repetidas(numeroAleatorio1) == 1) {
+                    for(int i=0; i<=19; i++){
+                        numeroAleatorio = 0 + generadorAleatorios.nextInt(20);
+                        if(Repetidas(numeroAleatorio) == 1){
                             Total_Preguntas++;
-                            Repe[Total_Preguntas] = numeroAleatorio1;
-                            pregunta_actual = numeroAleatorio1;
+                            pregunta_actual = numeroAleatorio;
+                            Repe[Total_Preguntas] = numeroAleatorio;
                             mostrarPregunta();
-                        } else {
-                            int numeroAleatorio2 = 0 + generadorAleatorios.nextInt(20);
-                            if (Repetidas(numeroAleatorio2) == 1) {
-                                Total_Preguntas++;
-                                Repe[Total_Preguntas] = numeroAleatorio2;
-                                pregunta_actual = numeroAleatorio2;
-                                mostrarPregunta();
-                            }
+                            break;
                         }
                     }
                 } else {
-                    Toast.makeText(Conexion.this, "Felicidades Superaste el Modulo de Saber!!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Conexion.this, "Finalizo el juego, gracias por participar", Toast.LENGTH_SHORT).show();
                     finish();
                 }
         }

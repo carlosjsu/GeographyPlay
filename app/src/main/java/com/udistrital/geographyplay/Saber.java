@@ -22,11 +22,11 @@ public class Saber extends AppCompatActivity {
 
     private FirebaseFirestore mDataBase;
 
-    private String[] preguntas = new String[17];
+    private String[] preguntas = new String[20];
     private int ids_Respuestas[]={
             R.id.Respuesta1,R.id.Respuesta2,R.id.Respuesta3,R.id.Respuesta4
     };
-    private int Repe[]={15,15,85,98,54,69,25,50};
+    private int Repe[]={35,35,85,98,54,69,25,50};
     private int respuesta_correcta;
     private int Total_Preguntas=0;
     private int pregunta_actual;
@@ -84,21 +84,21 @@ public class Saber extends AppCompatActivity {
                 Random generadorAleatorios = new Random();
 
                 if(Total_Preguntas <6){
-                    int numeroAleatorio = 0+generadorAleatorios.nextInt(11);
+                    int numeroAleatorio = 0+generadorAleatorios.nextInt(20);
                     if(Repetidas(numeroAleatorio)==1){
                         Total_Preguntas++;
                         pregunta_actual= numeroAleatorio;
                         Repe[Total_Preguntas]=numeroAleatorio;
                         Mostrar_Preguntas();
                     }else{
-                        int numeroAleatorio1 = 0+generadorAleatorios.nextInt(11);
+                        int numeroAleatorio1 = 0+generadorAleatorios.nextInt(20);
                         if(Repetidas(numeroAleatorio1)==1){
                             Total_Preguntas++;
                             Repe[Total_Preguntas]=numeroAleatorio1;
                             pregunta_actual= numeroAleatorio1;
                             Mostrar_Preguntas();
                         }else{
-                            int numeroAleatorio2 = 0+generadorAleatorios.nextInt(11);
+                            int numeroAleatorio2 = 0+generadorAleatorios.nextInt(20);
                             if(Repetidas(numeroAleatorio2)==1){
                                 Total_Preguntas++;
                                 Repe[Total_Preguntas]=numeroAleatorio2;
