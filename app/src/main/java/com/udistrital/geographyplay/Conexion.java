@@ -29,6 +29,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -84,6 +85,10 @@ public class Conexion extends AppCompatActivity {
     private int scoreQuestion = 0;
     private int timeQuestion = 0;
     private int respuesta = -1;
+    private FirebaseAuth mAuth;
+    private String user = "";
+    private String userConec = "";
+    private int totalScoreConec = 0;
 
     //Generador uuid random UUID.randomUUID().toString()
     @Override
@@ -97,6 +102,7 @@ public class Conexion extends AppCompatActivity {
         bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         intentoHabilitar = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
         mDataBase = FirebaseFirestore.getInstance();
+        mAuth = FirebaseAuth.getInstance();
         Pregunta = (TextView) findViewById(R.id.Text_Pregunta);
         grupo = (RadioGroup) findViewById(R.id.grupo);
         NPregunta = (TextView) findViewById(R.id.Np);
@@ -161,6 +167,27 @@ public class Conexion extends AppCompatActivity {
                 }
             }
         });
+        Log.e("","Email: "+mAuth.getCurrentUser().getEmail());
+        mDataBase.collection("Users")
+                .whereEqualTo("email", mAuth.getCurrentUser().getEmail())
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                try {
+                                    Log.e("","Consulta: "+document.getData().get("user").toString());
+                                    user = document.getData().get("user").toString();
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        } else {
+                            Log.e("", "Error getting documents: ", task.getException());
+                        }
+                    }
+                });
         grupo.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -237,6 +264,7 @@ public class Conexion extends AppCompatActivity {
                 case ESTADO_MENSAJE_RECIBIDO:
                     byte[] readBuff = (byte[]) msg.obj;
                     String mensajeTemporal = new String(readBuff, 0, msg.arg1);
+                    Log.e("","Mensaje recibido:"+ mensajeTemporal);
                     if (mensajeTemporal.equals("OK")) {
                         Log.e("", "Empieza a cambiar la vista");
                         botonEmparejar.setVisibility(View.INVISIBLE);
@@ -253,6 +281,12 @@ public class Conexion extends AppCompatActivity {
                         rule.setVisibility(View.VISIBLE);
                         puntaje.setVisibility(View.VISIBLE);
                         textPuntaje.setVisibility(View.VISIBLE);
+                    }else if(mensajeTemporal.contains("{")){
+                        userConec = mensajeTemporal.replace("{","");
+                        Log.e("","Usuario rival: "+userConec);
+                    }else if(mensajeTemporal.contains("}")){
+                        totalScoreConec = Integer.parseInt(mensajeTemporal.replace("}",""));
+                        Log.e("","Puntaje rival: "+totalScoreConec);
                     }
                     break;
             }
@@ -477,6 +511,14 @@ public class Conexion extends AppCompatActivity {
                 scoreQuestion = 0;
                 timeQuestion = 0;
             }
+            if(Total_Preguntas == 3){
+                String mensaje = "{"+user;
+                enviarRecibir.write(mensaje.getBytes());
+            }
+            if(Total_Preguntas == 6){
+                String mensaje = "}"+totalScore;
+                enviarRecibir.write(mensaje.getBytes());
+            }
                 if (Total_Preguntas < 6) {
                     for(int i=0; i<=19; i++){
                         numeroAleatorio = 0 + generadorAleatorios.nextInt(20);
@@ -489,26 +531,31 @@ public class Conexion extends AppCompatActivity {
                         }
                     }
                 } else {
-                    AlertDialog.Builder builder = new AlertDialog.Builder(Conexion.this);
-                    builder.setMessage("Deseas iniciar otra partida");
-                    builder.setTitle("Su puntaje final fue: "+totalScore);
-                    builder.setPositiveButton("Si", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            Intent homeIntent = new Intent(Conexion.this, Conexion.class);
-                            startActivity(homeIntent);
-                            finish();
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        public void run() {
+                            AlertDialog.Builder builder = new AlertDialog.Builder(Conexion.this);
+                            builder.setMessage("Deseas iniciar otra partida");
+                            builder.setTitle(user + " tu puntaje: " + totalScore + " el de tu oponente " + userConec + " " + totalScoreConec);
+                            builder.setPositiveButton("Si", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Intent homeIntent = new Intent(Conexion.this, Conexion.class);
+                                    startActivity(homeIntent);
+                                    finish();
+                                }
+                            });
+                            builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    finish();
+                                    finish();
+                                }
+                            });
+                            AlertDialog dialog = builder.create();
+                            dialog.show();
                         }
-                    });
-                    builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            finish();
-                            finish();
-                        }
-                    });
-                    AlertDialog dialog = builder.create();
-                    dialog.show();
+                }, 1000);
                 }
         }
     }
