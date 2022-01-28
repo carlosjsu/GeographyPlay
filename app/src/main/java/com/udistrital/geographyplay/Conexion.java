@@ -72,6 +72,8 @@ public class Conexion extends AppCompatActivity {
     private TextView Pregunta;
     private TextView NPregunta;
     private TextView time;
+    private TextView puntaje;
+    private TextView textPuntaje;
     private RadioGroup grupo;
     private View rule;
     private Boolean banPre = true;
@@ -79,6 +81,9 @@ public class Conexion extends AppCompatActivity {
     private static final String APP_NAME = "GeographyPlayOnline";
     private static final UUID M_UIID = UUID.fromString("efb6c78c-7c45-11ec-90d6-0242ac120003");
     private int totalScore = 0;
+    private int scoreQuestion = 0;
+    private int timeQuestion = 0;
+    private int respuesta = -1;
 
     //Generador uuid random UUID.randomUUID().toString()
     @Override
@@ -97,6 +102,11 @@ public class Conexion extends AppCompatActivity {
         NPregunta = (TextView) findViewById(R.id.Np);
         time = (TextView) findViewById(R.id.time);
         rule = findViewById(R.id.ruler);
+        textPuntaje = (TextView) findViewById(R.id.textPuntaje);
+        puntaje = (TextView) findViewById(R.id.puntaje);
+        puntaje.setText(String.valueOf(totalScore));
+        textPuntaje.setVisibility(View.INVISIBLE);
+        puntaje.setVisibility(View.INVISIBLE);
         Pregunta.setVisibility(View.INVISIBLE);
         grupo.setVisibility(View.INVISIBLE);
         NPregunta.setVisibility(View.INVISIBLE);
@@ -135,7 +145,6 @@ public class Conexion extends AppCompatActivity {
 
 
         mDataBase.collection("Preguntas").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful()) {
@@ -149,7 +158,17 @@ public class Conexion extends AppCompatActivity {
                                 + ";" + document.getData().get("respuestaI3").toString();
                         i++;
                     }
-                    //mostrarPregunta();
+                }
+            }
+        });
+        grupo.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                View radioButton = group.findViewById(checkedId);
+                int index = group.indexOfChild(radioButton);
+                respuesta = index;
+                if(respuesta == respuesta_correcta){
+                    timeQuestion = Integer.parseInt(time.getText().toString());
                 }
             }
         });
@@ -232,6 +251,8 @@ public class Conexion extends AppCompatActivity {
                         NPregunta.setVisibility(View.VISIBLE);
                         time.setVisibility(View.VISIBLE);
                         rule.setVisibility(View.VISIBLE);
+                        puntaje.setVisibility(View.VISIBLE);
+                        textPuntaje.setVisibility(View.VISIBLE);
                     }
                     break;
             }
@@ -410,6 +431,8 @@ public class Conexion extends AppCompatActivity {
                         NPregunta.setVisibility(View.VISIBLE);
                         time.setVisibility(View.VISIBLE);
                         rule.setVisibility(View.VISIBLE);
+                        puntaje.setVisibility(View.VISIBLE);
+                        textPuntaje.setVisibility(View.VISIBLE);
                     }
                 });
                 builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -436,6 +459,8 @@ public class Conexion extends AppCompatActivity {
     public void cambiaPregunta() {
         Random generadorAleatorios = new Random();
         int numeroAleatorio;
+        Log.e("","Respuesta selecionada2: "+respuesta);
+        Log.e("","Respuesta correcta2: "+respuesta_correcta);
         if (banPre) {
             numeroAleatorio = 0 + generadorAleatorios.nextInt(20);
             pregunta_actual = numeroAleatorio;
@@ -444,15 +469,13 @@ public class Conexion extends AppCompatActivity {
             banPre = false;
             mostrarPregunta();
         } else {
-            int id = grupo.getCheckedRadioButtonId();
-            int respuesta = -1;
-            for (int i = 0; i < ids_Respuestas.length; i++) {
-                if (ids_Respuestas[i] == id) {
-                    respuesta = i;
-                }
-            }
             if (respuesta == respuesta_correcta) {
-                totalScore = totalScore *100 ;
+                scoreQuestion = timeQuestion * 100;
+                totalScore = totalScore + scoreQuestion;
+                Log.e("","Puntaje: "+totalScore);
+                puntaje.setText(String.valueOf(totalScore));
+                scoreQuestion = 0;
+                timeQuestion = 0;
             }
                 if (Total_Preguntas < 6) {
                     for(int i=0; i<=19; i++){
@@ -466,8 +489,26 @@ public class Conexion extends AppCompatActivity {
                         }
                     }
                 } else {
-                    Toast.makeText(Conexion.this, "Finalizo el juego, gracias por participar", Toast.LENGTH_SHORT).show();
-                    finish();
+                    AlertDialog.Builder builder = new AlertDialog.Builder(Conexion.this);
+                    builder.setMessage("Deseas iniciar otra partida");
+                    builder.setTitle("Su puntaje final fue: "+totalScore);
+                    builder.setPositiveButton("Si", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent homeIntent = new Intent(Conexion.this, Conexion.class);
+                            startActivity(homeIntent);
+                            finish();
+                        }
+                    });
+                    builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            finish();
+                            finish();
+                        }
+                    });
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
                 }
         }
     }

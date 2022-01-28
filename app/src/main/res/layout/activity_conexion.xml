@@ -143,5 +143,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textPuntaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Puntaje Actual"
+        android:textColor="@android:color/background_dark"
+        android:textSize="28sp"
+        app:layout_constraintTop_toBottomOf="@+id/lista"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:id="@+id/puntaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
+        android:text="TextView"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/textPuntaje"
+        app:layout_constraintTop_toBottomOf="@+id/lista" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
