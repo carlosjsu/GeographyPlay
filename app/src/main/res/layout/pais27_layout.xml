@@ -7,19 +7,19 @@
 
     <TextView
         android:id="@+id/txtTitulo27"
-        android:layout_width="70dp"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="0.0625"
         android:layout_gravity="center"
         android:text="@string/peru"
         android:textColor="@android:color/black"
-        android:textSize="30sp"/>
+        android:textSize="35sp"/>
 
     <ImageView
         android:id="@+id/peru"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.25"
+        android:layout_weight="0.17"
         android:src="@drawable/peru"/>
 
     <TextView
@@ -28,7 +28,7 @@
         android:layout_height="0dp"
         android:layout_weight="0.525"
         android:text="@string/contenido_txt27"
-        android:textSize="25sp"/>
+        android:textSize="22sp"/>
 
     <ImageButton
         android:id="@+id/ibtnPeru"
