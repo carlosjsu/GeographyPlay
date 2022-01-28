@@ -131,6 +131,8 @@ public class Conexion extends AppCompatActivity {
                 Log.e("", "Entro al evento escuchar");
                 ServerClass server = new ServerClass();
                 server.start();
+                botonEscuchar.setVisibility(View.INVISIBLE);
+                botonEmparejar.setVisibility(View.INVISIBLE);
             }
         });
         botonEmparejar.setOnClickListener(new View.OnClickListener() {
@@ -241,6 +243,8 @@ public class Conexion extends AppCompatActivity {
             }
             ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(Conexion.this, android.R.layout.simple_list_item_1, lista);
             listaDispositivos.setAdapter(arrayAdapter);
+            botonEscuchar.setVisibility(View.INVISIBLE);
+            botonEmparejar.setVisibility(View.INVISIBLE);
         }
 
     }
@@ -351,7 +355,7 @@ public class Conexion extends AppCompatActivity {
                 handler.sendMessage(mensaje);
                 enviarRecibir = new EnviarRecibir(socket);
                 enviarRecibir.start();
-
+                botonEscuchar.setVisibility(View.INVISIBLE);
             } catch (IOException e) {
                 e.printStackTrace();
                 Message mensaje = Message.obtain();
@@ -536,7 +540,7 @@ public class Conexion extends AppCompatActivity {
                         public void run() {
                             AlertDialog.Builder builder = new AlertDialog.Builder(Conexion.this);
                             builder.setMessage("Deseas iniciar otra partida");
-                            builder.setTitle(user + " tu puntaje: " + totalScore + " el de tu oponente " + userConec + " " + totalScoreConec);
+                            builder.setTitle(user + " puntaje: " + totalScore + "\n" + userConec + " puntaje: " + totalScoreConec);
                             builder.setPositiveButton("Si", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
