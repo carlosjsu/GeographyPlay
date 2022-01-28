@@ -7,19 +7,20 @@
 
     <TextView
         android:id="@+id/txtTitulo28"
-        android:layout_width="300dp"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="0.0625"
+        android:layout_weight="0.125"
         android:layout_gravity="center"
+        android:gravity="center"
         android:text="@string/rep_blica_dominicana"
         android:textColor="@android:color/black"
-        android:textSize="30sp"/>
+        android:textSize="35sp"/>
 
     <ImageView
         android:id="@+id/repDom"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.25"
+        android:layout_weight="0.17"
         android:src="@drawable/repdomin"/>
 
     <TextView
@@ -28,7 +29,7 @@
         android:layout_height="0dp"
         android:layout_weight="0.525"
         android:text="@string/contenido_txt28"
-        android:textSize="25sp"/>
+        android:textSize="22sp"/>
 
     <ImageButton
         android:id="@+id/ibtnRepdom"

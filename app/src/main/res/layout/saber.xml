@@ -27,7 +27,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="51dp"
         android:fontFamily="@font/acme"
-        android:text="Módulo Conocimiento"
+        android:text="@string/modulo_conocimiento"
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
         android:textColorHighlight="@android:color/black"

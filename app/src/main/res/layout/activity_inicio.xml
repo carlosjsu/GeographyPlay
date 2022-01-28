@@ -19,7 +19,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="180dp"
-        android:text="Iniciar"
+        android:text="@string/btnIniciar"
         android:textSize="30sp"
         app:backgroundTint="#2196F3"
         style="?android:attr/borderlessButtonStyle"/>

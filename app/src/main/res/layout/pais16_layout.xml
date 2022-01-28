@@ -7,19 +7,19 @@
 
     <TextView
         android:id="@+id/txtTitulo16"
-        android:layout_width="250dp"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="0.0625"
         android:layout_gravity="center"
         android:text="@string/estados_unidos"
         android:textColor="@android:color/black"
-        android:textSize="30sp"/>
+        android:textSize="35sp"/>
 
     <ImageView
         android:id="@+id/eeuu"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.25"
+        android:layout_weight="0.17"
         android:src="@drawable/estados"/>
 
     <TextView
@@ -28,7 +28,7 @@
         android:layout_height="0dp"
         android:layout_weight="0.525"
         android:text="@string/contenido_txt16"
-        android:textSize="25sp"/>
+        android:textSize="22sp"/>
 
     <ImageButton
         android:id="@+id/ibtnUsa"
