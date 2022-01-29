@@ -35,7 +35,7 @@ public class ConcentreseSur extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.concentresesur);
-
+        getSupportActionBar().hide();
         tv_p1= (TextView) findViewById(R.id.tv_p1);
         tv_p2= (TextView) findViewById(R.id.tv_p2);
 

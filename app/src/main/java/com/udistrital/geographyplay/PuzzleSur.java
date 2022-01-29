@@ -62,6 +62,7 @@ public class PuzzleSur extends AppCompatActivity {
         cuadro6.setOnDragListener(new ChoiceDragListener());
         cuadro7.setOnDragListener(new ChoiceDragListener());
         cuadro8.setOnDragListener(new ChoiceDragListener());
+        getSupportActionBar().hide();
     }
 
     private final class ChoiceTouchListener implements View.OnTouchListener {

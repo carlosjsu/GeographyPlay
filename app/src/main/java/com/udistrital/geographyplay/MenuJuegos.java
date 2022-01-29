@@ -62,7 +62,7 @@ public class MenuJuegos extends Fragment {
         preguntas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(),Saber.class);
+                Intent intent = new Intent(getActivity(),Conocimientos.class);
                 startActivity(intent);
             }
         });

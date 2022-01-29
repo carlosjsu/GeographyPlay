@@ -61,6 +61,7 @@ public class PuzzleNorte extends AppCompatActivity {
         c7.setOnDragListener(new ChoiceDragListener());
         c8.setOnDragListener(new ChoiceDragListener());
         c9.setOnDragListener(new ChoiceDragListener());
+        getSupportActionBar().hide();
     }
 
     private final class ChoiceTouchListener implements View.OnTouchListener{

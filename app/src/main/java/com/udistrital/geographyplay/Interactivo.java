@@ -27,7 +27,6 @@ public class Interactivo extends AppCompatActivity {
 
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
-    private ImageView cerrarSesion;
     /**
      * The {@link ViewPager} that will host the section contents.
      */
@@ -53,7 +52,7 @@ public class Interactivo extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_interactivo, menu);
+        //getMenuInflater().inflate(R.menu.menu_interactivo, menu);
         return true;
     }
 

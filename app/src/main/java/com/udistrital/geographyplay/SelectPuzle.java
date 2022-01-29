@@ -17,6 +17,7 @@ public class SelectPuzle extends AppCompatActivity {
         setContentView(R.layout.selectpuzle);
         bsur = (ImageButton)findViewById(R.id.btnSur);
         bnorte = (ImageButton)findViewById(R.id.btnNorte);
+        getSupportActionBar().hide();
         bsur.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

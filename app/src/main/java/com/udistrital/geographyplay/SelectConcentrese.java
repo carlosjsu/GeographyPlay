@@ -22,6 +22,7 @@ public class SelectConcentrese extends AppCompatActivity {
 
         memosur = (ImageButton)findViewById(R.id.Sur);
         memonorte = (ImageButton)findViewById(R.id.Norte);
+        getSupportActionBar().hide();
         memosur.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

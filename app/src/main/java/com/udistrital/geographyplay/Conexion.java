@@ -60,7 +60,7 @@ public class Conexion extends AppCompatActivity {
     private CountDownTimer countTimer;
     private long timeInMillis = 10000;
     private FirebaseFirestore mDataBase;
-    public static int MILISEGUNDOS_ESPERA = 2000;
+    public static int MILISEGUNDOS_ESPERA = 1000;
 
     private String[] preguntas = new String[20];
     private int ids_Respuestas[] = {
@@ -95,6 +95,7 @@ public class Conexion extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_conexion);
+        getSupportActionBar().hide();
         botonEmparejar = findViewById(R.id.botonEmparejar);
         listaDispositivos = findViewById(R.id.lista);
         botonEscuchar = findViewById(R.id.btnEscuchar);
@@ -128,7 +129,6 @@ public class Conexion extends AppCompatActivity {
         botonEscuchar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.e("", "Entro al evento escuchar");
                 ServerClass server = new ServerClass();
                 server.start();
                 botonEscuchar.setVisibility(View.INVISIBLE);
@@ -179,7 +179,6 @@ public class Conexion extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 try {
-                                    Log.e("","Consulta: "+document.getData().get("user").toString());
                                     user = document.getData().get("user").toString();
                                 } catch (Exception e) {
                                     e.printStackTrace();
@@ -205,7 +204,6 @@ public class Conexion extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable @org.jetbrains.annotations.Nullable Intent data) {
-        Log.e("", "Activa bluetooth: " + requestCode);
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == codigoHabilitado) {
             if (resultCode == RESULT_OK) {
@@ -216,21 +214,7 @@ public class Conexion extends AppCompatActivity {
         }
     }
 
-
-
-  /*  private void apagarBluetooth(){
-        botonApagado.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(bluetoothAdapter.isEnabled()){
-                    bluetoothAdapter.disable();
-                }
-            }
-        });
-    }*/
-
     public void emparejar() {
-        Log.e("", "Entro metodo emparejamiento");
         Set<BluetoothDevice> bt = bluetoothAdapter.getBondedDevices();
         String[] lista = new String[bt.size()];
         btArray = new BluetoothDevice[bt.size()];
@@ -268,9 +252,7 @@ public class Conexion extends AppCompatActivity {
                 case ESTADO_MENSAJE_RECIBIDO:
                     byte[] readBuff = (byte[]) msg.obj;
                     String mensajeTemporal = new String(readBuff, 0, msg.arg1);
-                    Log.e("","Mensaje recibido:"+ mensajeTemporal);
                     if (mensajeTemporal.equals("OK")) {
-                        Log.e("", "Empieza a cambiar la vista");
                         botonEmparejar.setVisibility(View.INVISIBLE);
                         botonEscuchar.setVisibility(View.INVISIBLE);
                         status.setVisibility(View.INVISIBLE);
@@ -287,10 +269,8 @@ public class Conexion extends AppCompatActivity {
                         textPuntaje.setVisibility(View.VISIBLE);
                     }else if(mensajeTemporal.contains("{")){
                         userConec = mensajeTemporal.replace("{","");
-                        Log.e("","Usuario rival: "+userConec);
                     }else if(mensajeTemporal.contains("}")){
                         totalScoreConec = Integer.parseInt(mensajeTemporal.replace("}",""));
-                        Log.e("","Puntaje rival: "+totalScoreConec);
                     }
                     break;
             }
@@ -439,10 +419,6 @@ public class Conexion extends AppCompatActivity {
         }
         timeInMillis = 10000;
         startTimer();
-      /*  if (Total_Preguntas == 6) {
-            //Finaliza el juego
-            Toast.makeText(Conexion.this, "Finalizo Juego", Toast.LENGTH_SHORT).show();
-        }*/
     }
 
     public void esperarYCerrar(int milisegundos) {
@@ -497,8 +473,6 @@ public class Conexion extends AppCompatActivity {
     public void cambiaPregunta() {
         Random generadorAleatorios = new Random();
         int numeroAleatorio;
-        Log.e("","Respuesta selecionada2: "+respuesta);
-        Log.e("","Respuesta correcta2: "+respuesta_correcta);
         if (banPre) {
             numeroAleatorio = 0 + generadorAleatorios.nextInt(20);
             pregunta_actual = numeroAleatorio;
@@ -510,7 +484,6 @@ public class Conexion extends AppCompatActivity {
             if (respuesta == respuesta_correcta) {
                 scoreQuestion = timeQuestion * 100;
                 totalScore = totalScore + scoreQuestion;
-                Log.e("","Puntaje: "+totalScore);
                 puntaje.setText(String.valueOf(totalScore));
                 scoreQuestion = 0;
                 timeQuestion = 0;
@@ -559,7 +532,7 @@ public class Conexion extends AppCompatActivity {
                             AlertDialog dialog = builder.create();
                             dialog.show();
                         }
-                }, 1000);
+                }, 500);
                 }
         }
     }

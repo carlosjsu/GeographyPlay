@@ -36,7 +36,7 @@ public class ConcentreseNorte extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.concentrese_norte);
-
+        getSupportActionBar().hide();
         t_p1 = (TextView) findViewById(R.id.t_p1);
         t_p2 = (TextView) findViewById(R.id.t_p2);
 

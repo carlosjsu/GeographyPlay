@@ -39,7 +39,7 @@ public class Saber extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.saber);
         mDataBase = FirebaseFirestore.getInstance();
-
+        getSupportActionBar().hide();
         Pregunta =(TextView) findViewById(R.id.Text_Pregunta);
         grupo= (RadioGroup) findViewById(R.id.grupo) ;
         btnResponder =(Button) findViewById(R.id.btn_Responder);

@@ -12,12 +12,9 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.udistrital.geographyplay.ConocimientoFragment;
-import com.udistrital.geographyplay.FirstFragment;
+import com.udistrital.geographyplay.Conocimientos;
 import com.udistrital.geographyplay.MenuJuegos;
 import com.udistrital.geographyplay.ModulosFragment;
-import com.udistrital.geographyplay.R;
-import com.udistrital.geographyplay.SecondFragment;
 import com.udistrital.geographyplay.databinding.FragmentMainBinding;
 
 /**
@@ -35,7 +32,6 @@ public class PlaceholderFragment extends Fragment {
         switch (index){
             case 1: fragment = new ModulosFragment();break;
             case 2: fragment = new MenuJuegos();break;
-            case 3: fragment = new ConocimientoFragment();break;
         }
         return fragment;
     }
