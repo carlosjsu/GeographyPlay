@@ -27,12 +27,16 @@ public class pais20 extends Fragment {
         ibHaiti = (ImageButton) view.findViewById(R.id.ibtnHaiti);
         if(Locale.getDefault().toString().equals("es_CO")){
             mp = MediaPlayer.create(getContext(), R.raw.haiti);
+        }else{
+            mp = MediaPlayer.create(getContext(), R.raw.haitien);
         }
 
         ibHaiti.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mp.start();
+                if(!mp.isPlaying()){
+                    mp.start();
+                }
             }
         });
 
@@ -44,8 +48,11 @@ public class pais20 extends Fragment {
         super.setUserVisibleHint(isVisibleToUser);
         if (this.isVisible()) {
             if (!isVisibleToUser) {
-                Log.d("MyFragment", "Not visible anymore. Stopping audio.");
-                mp.pause();
+                if(mp.isPlaying()){
+                    Log.d("MyFragment", "Not visible anymore. Stopping audio.");
+                    mp.pause();
+                    mp.reset();
+                }
             }
         }
     }

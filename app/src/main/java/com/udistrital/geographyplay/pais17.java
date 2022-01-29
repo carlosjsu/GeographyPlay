@@ -4,6 +4,8 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,14 +28,32 @@ public class pais17 extends Fragment {
         ibGranada = (ImageButton) view.findViewById(R.id.ibtnGranada);
         if(Locale.getDefault().toString().equals("es_CO")){
             mp = MediaPlayer.create(getContext(), R.raw.granada);
+        }else{
+            mp = MediaPlayer.create(getContext(), R.raw.granadaen);
         }
 
         ibGranada.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mp.start();
+                if(!mp.isPlaying()){
+                    mp.start();
+                }
             }
         });
         return view;
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        if (this.isVisible()) {
+            if (!isVisibleToUser) {
+                if(mp.isPlaying()){
+                    Log.d("MyFragment", "Not visible anymore. Stopping audio.");
+                    mp.pause();
+                    mp.reset();
+                }
+            }
+        }
     }
 }

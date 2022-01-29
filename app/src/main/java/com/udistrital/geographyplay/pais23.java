@@ -26,12 +26,16 @@ public class pais23 extends Fragment {
         ibMex = (ImageButton) view.findViewById(R.id.ibtnMexico);
         if(Locale.getDefault().toString().equals("es_CO")){
             mp = MediaPlayer.create(getContext(), R.raw.mexico);
+        }else{
+            mp = MediaPlayer.create(getContext(), R.raw.mexicoen);
         }
 
         ibMex.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mp.start();
+                if(!mp.isPlaying()){
+                    mp.start();
+                }
             }
         });
 
@@ -43,8 +47,11 @@ public class pais23 extends Fragment {
         super.setUserVisibleHint(isVisibleToUser);
         if (this.isVisible()) {
             if (!isVisibleToUser) {
-                Log.d("MyFragment", "Not visible anymore. Stopping audio.");
-                mp.pause();
+                if(mp.isPlaying()){
+                    Log.d("MyFragment", "Not visible anymore. Stopping audio.");
+                    mp.pause();
+                    mp.reset();
+                }
             }
         }
     }
