@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import java.time.LocalDate;
 import java.util.Locale;
 
 /**
@@ -29,6 +30,7 @@ public class pais1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.pais1_layout,container,false);
         ibAntigua = (ImageButton) view.findViewById(R.id.ibtnAntigua);
+        Log.e("","Idioma: "+Locale.getDefault().toString());
         if(Locale.getDefault().toString().equals("es_CO")){
             mp = MediaPlayer.create(getContext(), R.raw.antiguaybarbuda);
         }else{

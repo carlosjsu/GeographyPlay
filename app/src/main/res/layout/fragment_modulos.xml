@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/azul"
-    tools:context="com.udistrital.geographyplay.FirstFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.udistrital.geographyplay.ModulosFragment">
 
     <TextView
         android:id="@+id/textView"
@@ -22,57 +23,47 @@
         android:textStyle="bold"
         android:gravity="center_horizontal" />
 
-
-    <ImageButton
-        android:id="@+id/btnSR"
-        android:layout_width="169dp"
-        android:layout_height="147dp"
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/idGrid"
         android:layout_below="@+id/textView"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="121dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="121dp"
-        android:background="@drawable/btnexplora"
-        android:fontFamily="@font/aclonica"
-        android:text="@string/btnSR"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        android:textStyle="bold|italic" />
-
-    <TextView
-        android:id="@+id/textBtnSAR"
-        android:layout_width="153dp"
+        android:layout_marginTop="70dp">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardSinAr"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/btnSR"
-        android:layout_alignTop="@+id/btnSR"
-        android:layout_alignEnd="@+id/btnSR"
-        android:layout_alignBottom="@+id/btnSR"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="59dp"
-        android:layout_marginEnd="9dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
         android:layout_marginBottom="50dp"
-        android:fontFamily="@font/aclonica"
-        android:gravity="center_horizontal"
-        android:text="@string/btnSR"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
-        android:textStyle="bold|italic" />
+        app:cardCornerRadius="4dp"
+        app:cardElevation="6dp"
+        android:foreground="?selectableItemBackground">
 
-    <TextView
-        android:id="@+id/txtContent"
-        android:layout_width="wrap_content"
-        android:layout_height="121dp"
-        android:layout_below="@+id/btnSR"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="71dp"
-        android:layout_marginEnd="28dp"
-        android:gravity="center_horizontal"
-        android:text="@string/txtDescPaises"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/info"></ImageView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Iniciar"
+                android:textAlignment="center"
+                android:textColor="#1B1A19"
+                android:textSize="25sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    </GridLayout>
+
 </RelativeLayout>

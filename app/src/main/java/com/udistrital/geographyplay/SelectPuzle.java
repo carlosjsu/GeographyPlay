@@ -2,6 +2,8 @@ package com.udistrital.geographyplay;
 
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,14 +11,14 @@ import android.widget.ImageButton;
 
 public class SelectPuzle extends AppCompatActivity {
 
-    ImageButton bsur;
-    ImageButton bnorte;
+    CardView bsur;
+    CardView bnorte;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.selectpuzle);
-        bsur = (ImageButton)findViewById(R.id.btnSur);
-        bnorte = (ImageButton)findViewById(R.id.btnNorte);
+        bsur = findViewById(R.id.cardSurP);
+        bnorte = findViewById(R.id.cardNorteP);
         getSupportActionBar().hide();
         bsur.setOnClickListener(new View.OnClickListener() {
             @Override

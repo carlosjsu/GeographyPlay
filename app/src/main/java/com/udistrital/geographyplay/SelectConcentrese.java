@@ -3,6 +3,7 @@ package com.udistrital.geographyplay;
 import android.content.Context;
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
@@ -12,16 +13,16 @@ import android.widget.ImageButton;
 
 public class SelectConcentrese extends AppCompatActivity {
 
-    ImageButton memosur;
-    ImageButton memonorte;
+    CardView memosur;
+    CardView memonorte;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.selectconcentrese);
 
-        memosur = (ImageButton)findViewById(R.id.Sur);
-        memonorte = (ImageButton)findViewById(R.id.Norte);
+        memosur = findViewById(R.id.cardSur);
+        memonorte = findViewById(R.id.cardNorte);
         getSupportActionBar().hide();
         memosur.setOnClickListener(new View.OnClickListener() {
             @Override

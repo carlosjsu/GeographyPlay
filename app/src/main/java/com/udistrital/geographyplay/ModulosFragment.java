@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -23,16 +24,14 @@ import com.udistrital.geographyplay.databinding.FragmentModulosBinding;
  */
 public class ModulosFragment extends Fragment {
 
-    private FragmentModulosBinding binding;
     View vista;
-    ImageButton sinAR;
-    ImageButton conAR;
+    CardView sinAR;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         vista = inflater.inflate(R.layout.fragment_modulos, container, false);
-        sinAR=(ImageButton) vista.findViewById(R.id.btnSR);
+        sinAR= vista.findViewById(R.id.cardSinAr);
         sinAR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -40,21 +39,12 @@ public class ModulosFragment extends Fragment {
                 startActivity(intent);
             }
         });
-       /* conAR=(Button) vista.findViewById(R.id.btnPuzle);
-        conAR.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(),SelectPuzle.class);
-                startActivity(intent);
-            }
-        });*/
         return vista;
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        binding = null;
     }
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name

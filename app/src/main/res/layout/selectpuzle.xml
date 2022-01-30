@@ -22,49 +22,84 @@
         android:textSize="30sp"
         android:textStyle="bold"
         android:gravity="center_horizontal" />
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/idGrid"
+        android:layout_below="@+id/textView"
+        android:columnCount="1"
+        android:rowCount="2"
+        android:layout_marginTop="70dp">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardNorteP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:layout_marginBottom="70dp"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="6dp"
+            android:foreground="?selectableItemBackground">
 
-    <ImageButton
-        android:id="@+id/btnSur"
-        android:layout_width="116dp"
-        android:layout_height="149dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="70dp"
-        android:background="@drawable/botonsur"
-        android:textColor="@android:color/background_light"
-        android:textStyle="bold|italic" />
-    <TextView
-        android:layout_width="140dp"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="140dp"
-        android:text="@string/america_del_sur"
-        android:textAlignment="center"
-        android:textSize="24dp"
-        android:textColor="@android:color/background_light"
-        android:textStyle="bold|italic"
-        android:gravity="center_horizontal" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical">
 
-    <ImageButton
-        android:id="@+id/btnNorte"
-        android:layout_width="182dp"
-        android:layout_height="119dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="165dp"
-        android:background="@drawable/botonnorte" />
-    <TextView
-        android:layout_width="160dp"
-        android:layout_height="70dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="180dp"
-        android:text="@string/america_del_norte_y_centro"
-        android:textAlignment="center"
-        android:textSize="24dp"
-        android:textColor="@android:color/background_light"
-        android:textStyle="bold|italic"
-        android:gravity="center_horizontal" />
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/americanorte"></ImageView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/america_del_norte_y_centro"
+                    android:textAlignment="center"
+                    android:textColor="#1B1A19"
+                    android:textSize="25sp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardSurP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:layout_marginBottom="50dp"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="6dp"
+            android:foreground="?selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/americasur"></ImageView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/america_del_sur"
+                    android:textAlignment="center"
+                    android:textColor="#1B1A19"
+                    android:textSize="25sp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
 
 </RelativeLayout>
