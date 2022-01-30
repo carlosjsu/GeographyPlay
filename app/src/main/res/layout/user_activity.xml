@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtEmpty1"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.04"
+        android:layout_gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"/>
+
+    <ImageView
+        android:id="@+id/user"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.05"
+        android:src="@drawable/user"/>
+
+    <TextView
+        android:id="@+id/txtEmpty2"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.01"
+        android:layout_gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/txtUser"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.03"
+        android:layout_gravity="center"
+        android:text="@string/usuario"
+        android:textColor="@android:color/black"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/txtUserOb"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.03"
+        android:layout_gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/txtEmailUser"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.03"
+        android:layout_gravity="center"
+        android:text="@string/correo"
+        android:textColor="@android:color/black"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/txtEmailUserOb"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.03"
+        android:layout_gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="25sp"/>
+
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.025"
+        android:text="@string/cerrar_sesion"
+        android:textSize="20sp"
+        android:layout_gravity="center"/>
+    <TextView
+        android:id="@+id/txtEmpty"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.04"
+        android:layout_gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"/>
+
+</LinearLayout>

@@ -42,9 +42,7 @@ public class MainActivity extends AppCompatActivity implements ModulosFragment.O
         cerrarSesion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.e("","Cerro sesion");
-                FirebaseAuth.getInstance().signOut();
-                Intent login = new Intent(MainActivity.this, login.class);
+                Intent login = new Intent(MainActivity.this, UserActivity.class);
                 startActivity(login);
             }
         });

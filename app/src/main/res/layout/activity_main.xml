@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/Theme.GeographyPlay.AppBarOverlay"
-        android:background="@color/black">
+        android:background="@color/colorPrimaryDark">
         <LinearLayout
             android:id="@+id/menuLinearLayout"
             android:layout_below="@+id/midTableLayout"
@@ -31,11 +31,11 @@
 
             <ImageView
                 android:id="@+id/cerrarSesion"
-                android:layout_width="140dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="14dp"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/cerrarsesion" />
+                app:srcCompat="@drawable/outuser" />
         </LinearLayout>
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"
@@ -51,7 +51,7 @@
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#2196F3"
+        android:background="@color/azul"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" >
 
 

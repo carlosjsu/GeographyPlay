@@ -1,118 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtEmpty"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:layout_gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"/>
+
+    <ImageView
+        android:id="@+id/userLogin"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:src="@drawable/user"/>
+
+    <TextView
+        android:id="@+id/txtEmpty1"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"/>
 
     <EditText
         android:id="@+id/email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="244dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
+        android:layout_width="350dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="0.2"
         android:ems="10"
         android:hint="Email"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"
-        />
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/pasword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
+        android:layout_width="350dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:layout_gravity="center"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:text="login"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pasword" />
+        android:layout_width="350dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.15"
+        android:layout_gravity="center"
+        android:text="login"/>
 
     <Button
         android:id="@+id/registro"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:text="registrarse"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login" />
+        android:layout_width="350dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.15"
+        android:layout_gravity="center"
+        android:text="registrarse"/>
 
     <Button
         android:id="@+id/recuperar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:text="Olvidé mi contraseña"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registro" />
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="54dp"
-        android:layout_height="62dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recuperar"
-        app:srcCompat="@drawable/facebook"
-        tools:ignore="MissingConstraints" />
+        android:layout_width="350dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.15"
+        android:layout_gravity="center"
+        android:text="Olvidé mi contraseña"/>
 
-    <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="61dp"
-        android:layout_height="63dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton"
-        app:layout_constraintTop_toBottomOf="@+id/recuperar"
-        app:srcCompat="@drawable/google"
-        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/txtEmpty2"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout >
+</LinearLayout >

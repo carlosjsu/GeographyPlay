@@ -213,4 +213,10 @@
     <string name="usuario">User:</string>
     <string name="correo">Email:</string>
     <string name="registrarse">Sign in</string>
+    <string name="cerrar_sesion">Logout</string>
+    <string name="contra_olvidada">Forgot my password</string>
+    <string name="login">Login</string>
+    <string name="cuestionario">You are in the knowledge module in which you are going to answer a quiz of 5 questions about the topics supported in the application, press start quiz.</string>
+    <string name="cuestionarioTitulo">KNOWLEDGE MODULE</string>
+    <string name="inicar_cuestionario">Star quiz</string>
 </resources>

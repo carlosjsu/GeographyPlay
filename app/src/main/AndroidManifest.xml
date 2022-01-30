@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GeographyPlay">
-        <activity android:name=".Conexion"></activity>
+        <activity android:name=".UserActivity"></activity>
+        <activity android:name=".Conexion" />
         <activity android:name=".RecuperarClave" />
         <activity
             android:name=".Conocimientos"
@@ -44,9 +45,9 @@
         <activity
             android:name=".SelectPuzle"
             android:screenOrientation="portrait">
-        <intent-filter>
-            <action android:name="android.intent.action.SelectPuzle" />
-        </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SelectPuzle" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".PuzzleNorte"
