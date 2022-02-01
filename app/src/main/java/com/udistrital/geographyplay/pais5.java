@@ -25,10 +25,10 @@ public class pais5 extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.pais5_layout,container,false);
         ibBelice = (ImageButton) view.findViewById(R.id.ibtnBelice);
-        if(Locale.getDefault().toString().equals("es_CO")){
-            mp = MediaPlayer.create(getContext(), R.raw.belice);
-        }else{
+        if(Locale.getDefault().toString().contains("en_")){
             mp = MediaPlayer.create(getContext(), R.raw.belizeen);
+        }else{
+            mp = MediaPlayer.create(getContext(), R.raw.belice);
         }
 
         ibBelice.setOnClickListener(new View.OnClickListener() {

@@ -25,10 +25,10 @@ public class pais32 extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.pais32_layout,container,false);
         ibSurinam = (ImageButton) view.findViewById(R.id.ibtnSurinam);
-        if(Locale.getDefault().toString().equals("es_CO")){
-            mp = MediaPlayer.create(getContext(), R.raw.surinam);
-        }else{
+        if(Locale.getDefault().toString().contains("en_")){
             mp = MediaPlayer.create(getContext(), R.raw.surinamen);
+        }else{
+            mp = MediaPlayer.create(getContext(), R.raw.surinam);
         }
 
         ibSurinam.setOnClickListener(new View.OnClickListener() {

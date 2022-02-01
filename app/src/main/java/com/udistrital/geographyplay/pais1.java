@@ -31,10 +31,10 @@ public class pais1 extends Fragment {
         view = inflater.inflate(R.layout.pais1_layout,container,false);
         ibAntigua = (ImageButton) view.findViewById(R.id.ibtnAntigua);
         Log.e("","Idioma: "+Locale.getDefault().toString());
-        if(Locale.getDefault().toString().equals("es_CO")){
-            mp = MediaPlayer.create(getContext(), R.raw.antiguaybarbuda);
-        }else{
+        if(Locale.getDefault().toString().contains("en_")){
             mp = MediaPlayer.create(getContext(), R.raw.antiguaandbarbudaen);
+        }else{
+            mp = MediaPlayer.create(getContext(), R.raw.antiguaybarbuda);
         }
 
         ibAntigua.setOnClickListener(new View.OnClickListener() {

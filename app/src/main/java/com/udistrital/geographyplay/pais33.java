@@ -25,10 +25,10 @@ public class pais33 extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.pais33_layout,container,false);
         ibTrinidad = (ImageButton) view.findViewById(R.id.ibtnTrinidad);
-        if(Locale.getDefault().toString().equals("es_CO")){
-            mp = MediaPlayer.create(getContext(), R.raw.trinidadytobago);
-        }else{
+        if(Locale.getDefault().toString().contains("en_")){
             mp = MediaPlayer.create(getContext(), R.raw.trinidaden);
+        }else{
+            mp = MediaPlayer.create(getContext(), R.raw.trinidadytobago);
         }
 
         ibTrinidad.setOnClickListener(new View.OnClickListener() {

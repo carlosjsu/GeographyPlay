@@ -25,10 +25,10 @@ public class pais19 extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.pais19_layout,container,false);
         ibGuyana = (ImageButton) view.findViewById(R.id.ibtnGuyana);
-        if(Locale.getDefault().toString().equals("es_CO")){
-            mp = MediaPlayer.create(getContext(), R.raw.guyana);
-        }else{
+        if(Locale.getDefault().toString().contains("en_")){
             mp = MediaPlayer.create(getContext(), R.raw.guyanaen);
+        }else{
+            mp = MediaPlayer.create(getContext(), R.raw.guyana);
         }
 
         ibGuyana.setOnClickListener(new View.OnClickListener() {

@@ -25,10 +25,10 @@ public class pais14 extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.pais14_layout,container,false);
         ibEcua = (ImageButton) view.findViewById(R.id.ibtnEcua);
-        if(Locale.getDefault().toString().equals("es_CO")){
-            mp = MediaPlayer.create(getContext(), R.raw.ecuador);
-        }else{
+        if(Locale.getDefault().toString().contains("en_")){
             mp = MediaPlayer.create(getContext(), R.raw.ecuadoren);
+        }else{
+            mp = MediaPlayer.create(getContext(), R.raw.ecuador);
         }
 
         ibEcua.setOnClickListener(new View.OnClickListener() {

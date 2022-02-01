@@ -24,10 +24,10 @@ public class pais10 extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.pais10_layout,container,false);
         ibCol = (ImageButton) view.findViewById(R.id.ibtnCol);
-        if(Locale.getDefault().toString().equals("es_CO")){
-            mp = MediaPlayer.create(getContext(), R.raw.colombia);
-        }else{
+        if(Locale.getDefault().toString().contains("en_")){
             mp = MediaPlayer.create(getContext(), R.raw.colombiaen);
+        }else{
+            mp = MediaPlayer.create(getContext(), R.raw.colombia);
         }
 
         ibCol.setOnClickListener(new View.OnClickListener() {
