@@ -60,9 +60,7 @@ public class registrarse extends AppCompatActivity {
 
                 if(!validarEmail(email.getText().toString())) {
                     Toast.makeText(registrarse.this, "Correo no valido", Toast.LENGTH_SHORT).show();
-                }if(pasword.getText().toString().length()<6){
-                    Toast.makeText(registrarse.this, "La contraseña debe tener al menos 6 caracteres", Toast.LENGTH_SHORT).show();
-                }else{
+                }if(!validatePassword()){
                     try {
                         mDialog.setMessage("Espere un momento.....");
                         mDialog.setCanceledOnTouchOutside(false);
@@ -156,4 +154,40 @@ public class registrarse extends AppCompatActivity {
         String mensajeDes = new String(mensajeByte);
         return mensajeDes;
     }*/
+
+    private Boolean validatePassword(){
+
+            boolean validacion = false;
+            if (!pasword.getText().toString().matches(".*[!@#$%^&*+=?-].*")){
+                Toast.makeText(registrarse.this, "La contraseña debe tener al menos 1 caracter especial", Toast.LENGTH_SHORT).show();
+                validacion = true;
+            }
+
+            if (!pasword.getText().toString().matches(".*\\d.*")){
+                Toast.makeText(registrarse.this, "La contraseña debe tener al menos 1 caracter númerico", Toast.LENGTH_SHORT).show();
+                validacion = true;
+            }
+
+            if (!pasword.getText().toString().matches(".*[a-z].*")){
+                Toast.makeText(registrarse.this, "La contraseña debe tener al menos 1 caracter en minuscula", Toast.LENGTH_SHORT).show();
+                validacion = true;
+            }
+
+            if (!pasword.getText().toString().matches(".*[A-Z].*")){
+                Toast.makeText(registrarse.this, "La contraseña debe tener al menos 1 caracter en mayuscula", Toast.LENGTH_SHORT).show();
+                validacion = true;
+            }
+
+            if (!pasword.getText().toString().matches(".{8,15}")){
+                Toast.makeText(registrarse.this, "La contraseña debe tener minimo 8 caracteres y maximo 15", Toast.LENGTH_SHORT).show();
+                validacion = true;
+            }
+
+            if (pasword.getText().toString().matches(".*\\s.*")){
+                Toast.makeText(registrarse.this, "La contraseña no debe contener espacios", Toast.LENGTH_SHORT).show();
+                validacion = true;
+            }
+
+        return validacion;
+    }
 }
