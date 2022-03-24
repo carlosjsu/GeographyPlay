@@ -10,38 +10,37 @@
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="27dp"
         android:fontFamily="@font/acme"
-        android:text="Módulo del Conocimiento"
+        android:gravity="center_horizontal"
+        android:text="@string/modulo_conocimiento"
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
         android:textColorHighlight="@android:color/black"
         android:textColorLink="@android:color/black"
         android:textSize="36sp"
-        android:textStyle="bold"
-        android:gravity="center_horizontal" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:layout_below="@+id/textView3"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_marginTop="46dp"
         android:fontFamily="@font/acme"
-        android:text="Estas en el módulo del conocimiento en el cual vas a responder un cuestionario de 6 preguntas acerca de los temas apoyados en la aplicación, presiona iniciar cuestionario.
-"
+        android:gravity="center_horizontal"
+        android:text="@string/desc_conocimiento"
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
         android:textColorHighlight="@android:color/black"
         android:textColorLink="@android:color/black"
         android:textSize="25sp"
-        android:textStyle="bold"
-        android:gravity="center_horizontal" />
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/IniciarCuestionario"
@@ -50,6 +49,6 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="70dp"
-        android:text="Inicar cuestionario" />
+        android:text="@string/inicar_cuestionario" />
 
 </RelativeLayout>

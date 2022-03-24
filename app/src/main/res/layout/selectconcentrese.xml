@@ -17,11 +17,11 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
         android:fontFamily="@font/acme"
+        android:gravity="center_horizontal"
         android:text="@string/pon_a_prueba_tu_memoria"
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
-        android:textSize="30sp"
-        android:gravity="center_horizontal" />
+        android:textSize="30sp" />
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

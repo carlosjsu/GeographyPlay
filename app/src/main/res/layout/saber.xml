@@ -17,6 +17,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="11dp"
+        android:textColor="@android:color/background_light"
         android:text="TextView"
         android:textSize="18sp" />
 
@@ -28,14 +29,12 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="51dp"
         android:fontFamily="@font/acme"
+        android:gravity="center_horizontal"
         android:text="@string/modulo_conocimiento"
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
-        android:textColorHighlight="@android:color/black"
-        android:textColorLink="@android:color/black"
         android:textSize="36sp"
-        android:textStyle="bold"
-        android:gravity="center_horizontal" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/Text_Pregunta"
@@ -48,7 +47,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="40dp"
         android:text="TextView"
-        android:textColor="@android:color/background_dark"
+        android:textColor="@android:color/background_light"
         android:textSize="28sp" />
 
     <View
@@ -66,7 +65,8 @@
         android:layout_alignLeft="@+id/Text_Pregunta"
         android:layout_alignStart="@+id/Text_Pregunta"
         android:layout_below="@+id/ruler"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/background_light">
 
 
         <RadioButton
@@ -75,7 +75,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="RadioButton"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:textColor="@android:color/background_light"/>
 
         <RadioButton
             android:id="@+id/Respuesta2"
@@ -83,7 +84,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="RadioButton"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:textColor="@android:color/background_light"/>
 
         <RadioButton
             android:id="@+id/Respuesta3"
@@ -91,7 +93,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="RadioButton"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:textColor="@android:color/background_light"/>
 
         <RadioButton
             android:id="@+id/Respuesta4"
@@ -99,7 +102,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="RadioButton"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:textColor="@android:color/background_light"/>
     </RadioGroup>
 
     <Button
@@ -109,6 +113,6 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:text="Responder" />
+        android:text="@string/resp_pre" />
 
 </RelativeLayout>

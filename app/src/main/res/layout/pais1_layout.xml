@@ -9,12 +9,12 @@
         android:id="@+id/txtTitulo1"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="0.125"
         android:layout_gravity="center"
+        android:layout_weight="0.125"
         android:gravity="center"
         android:text="@string/antigua_y_barbuda"
-        android:textColor="@android:color/black"
-        android:textSize="35sp"/>
+        android:textColor="@android:color/background_light"
+        android:textSize="35sp" />
 
     <ImageView
         android:id="@+id/antigua"
@@ -25,11 +25,12 @@
 
     <TextView
         android:id="@+id/txtContenido1"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.525"
         android:text="@string/contenido_txt1"
-        android:textSize="22sp"/>
+        android:textColor="@android:color/background_light"
+        android:textSize="22sp" />
 
     <ImageButton
         android:id="@+id/ibtnAntigua"

@@ -117,25 +117,31 @@ public class login extends AppCompatActivity {
     }
 
     private void validateLogin(String passEncrip){
-        mAuth.signInWithEmailAndPassword(email.getText().toString(), passEncrip)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>(){
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            Intent menu = new Intent(login.this, MainActivity.class);
-                            startActivity(menu);
-                        }else{
-                            if(!bandera) {
-                                bandera = true;
-                                validateLogin(pasword.getText().toString());
+        if(passEncrip != null) {
+            mAuth.signInWithEmailAndPassword(email.getText().toString(), passEncrip)
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>(){
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if(task.isSuccessful()){
+                                Intent menu = new Intent(login.this, MainActivity.class);
+                                startActivity(menu);
                             }else{
-                                mDialog.dismiss();
-                                Toast.makeText(login.this, "Correo y/o contraseña incorrecta",
-                                        Toast.LENGTH_SHORT).show();
-                            }
+                                if(!bandera) {
+                                    bandera = true;
+                                    validateLogin(pasword.getText().toString());
+                                }else{
+                                    mDialog.dismiss();
+                                    Toast.makeText(login.this, "Correo y/o contraseña incorrecta",
+                                            Toast.LENGTH_SHORT).show();
+                                }
 
+                            }
                         }
-                    }
-                });
+                    });
+        }else{
+            mDialog.dismiss();
+            Toast.makeText(login.this, "Correo y/o contraseña incorrecta",
+                    Toast.LENGTH_SHORT).show();
+        }
     }
 }

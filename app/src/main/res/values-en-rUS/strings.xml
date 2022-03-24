@@ -4,7 +4,7 @@
     <string name="tab_text_1">Knowledge</string>
     <string name="tab_text_2">Games</string>
     <string name="tab_text_3">Understanding</string>
-    <string name="title_activity_inicio">Beginning</string>
+    <string name="title_activity_inicio">GeographyPlay</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -219,4 +219,12 @@
     <string name="cuestionario">You are in the knowledge module in which you are going to answer a quiz of 5 questions about the topics supported in the application, press start quiz.</string>
     <string name="cuestionarioTitulo">KNOWLEDGE MODULE</string>
     <string name="inicar_cuestionario">Star quiz</string>
+    <string name="resp_pre">Reply</string>
+    <string name="online">Online</string>
+    <string name="conexion">COMPETE ONLINE</string>
+    <string name="emparejar">MATCH</string>
+    <string name="escuchar">LISTEN</string>
+    <string name="puntaje">Current score</string>
+    <string name="logi">Login</string>
+    <string name="desc_conocimiento">You are in the knowledge section in which you are going to answer a 6-question questionnaire about the topics supported in the application, press start questionnaire.</string>
 </resources>

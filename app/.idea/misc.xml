@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/activity_conexion.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/activity_inicio.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/activity_interactivo.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/activity_main.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/activity_main3.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/activity_main4.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/activity_recuperar_clave.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/concentrese_norte.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/concentresesur.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/fragment_conocimiento.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/fragment_main.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/fragment_menu_juegos.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/fragment_modulos.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/login.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/pais10_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/pais11_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/pais12_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/pais13_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/pais14_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/pais15_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/pais16_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/pais17_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/pais18_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/pais19_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/pais1_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/pais20_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/pais21_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/pais22_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/pais23_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/pais24_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/pais25_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/pais26_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/pais27_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/pais28_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/pais29_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/pais2_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/pais30_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/pais31_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/pais32_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/pais33_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/pais34_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/pais35_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/pais3_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/pais4_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/pais5_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/pais6_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/pais7_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/pais8_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/pais9_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/puzzlenorte.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/puzzlesur.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/saber.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/selectconcentrese.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/selectpuzle.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/vanly/Documents/Javier/GeographyPlay/app/src/main/res/layout/user_activity.xml" value="0.16032608695652173" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

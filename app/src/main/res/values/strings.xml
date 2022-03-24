@@ -3,7 +3,7 @@
     <string name="tab_text_1">Conocimiento</string>
     <string name="tab_text_2">Juegos</string>
     <string name="tab_text_3">Comprensión</string>
-    <string name="title_activity_inicio">Inicio</string>
+    <string name="title_activity_inicio">GeographyPlay</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -12,7 +12,7 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="como_quieres_interactuar_con_la_informaci_n">Interactua con la Información</string>
+    <string name="como_quieres_interactuar_con_la_informaci_n">INTERACTUA CON LA INFORMACIÓN</string>
     <string name="btnSR">INICIAR</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -206,8 +206,8 @@
     <string name="america_del_norte_y_centro">America del Norte y centro</string>
     <string name="america_del_sur">America del Sur</string>
     <string name="pon_a_prueba_tu_memoria">PON A PRUEBA TU MEMORIA</string>
-    <string name="elige_un_rompecabezas">Elige un Rompecabezas</string>
-    <string name="modulo_conocimiento">Módulo Conocimiento</string>
+    <string name="elige_un_rompecabezas">ELIGE UN ROMPECABEZAS</string>
+    <string name="modulo_conocimiento">PRUEBA TU CONOCIMIENTO</string>
     <string name="contrasenia">Contraseña:</string>
     <string name="usuario">Usuario:</string>
     <string name="correo">Correo:</string>
@@ -218,4 +218,12 @@
     <string name="cuestionario">Estas en el módulo del conocimiento en el cual vas a responder un cuestionario de 6 preguntas acerca de los temas apoyados en la aplicación, presiona iniciar cuestionario.</string>
     <string name="cuestionarioTitulo">MÓDULO DE CONOCIMIENTO</string>
     <string name="inicar_cuestionario">Inicar cuestionario</string>
+    <string name="resp_pre">Responder</string>
+    <string name="online">Online</string>
+    <string name="conexion">COMPITE ONLINE</string>
+    <string name="emparejar">EMPAREJAR</string>
+    <string name="escuchar">ESCUCHAR</string>
+    <string name="logi">Login</string>
+    <string name="puntaje">Puntaje Actual</string>
+    <string name="desc_conocimiento">Estas en la sección del conocimiento en el cual vas a responder un cuestionario de 6 preguntas acerca de los temas apoyados en la aplicación, presiona iniciar cuestionario.</string>
 </resources>

@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="70dp"
-        android:text="Emparejar"
+        android:text="@string/emparejar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="70dp"
-        android:text="Escuchar"
+        android:text="@string/escuchar"
         app:layout_constraintStart_toEndOf="@+id/botonEmparejar"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -164,7 +164,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:text="Puntaje Actual"
+        android:text="@string/puntaje"
         android:textColor="@android:color/background_dark"
         android:textSize="28sp"
         app:layout_constraintTop_toBottomOf="@+id/lista"

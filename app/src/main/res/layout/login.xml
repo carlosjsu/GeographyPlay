@@ -59,7 +59,7 @@
         android:layout_height="0dp"
         android:layout_weight="0.15"
         android:layout_gravity="center"
-        android:text="login"/>
+        android:text="@string/logi"/>
 
     <Button
         android:id="@+id/registro"
@@ -67,7 +67,7 @@
         android:layout_height="0dp"
         android:layout_weight="0.15"
         android:layout_gravity="center"
-        android:text="registrarse"/>
+        android:text="@string/registrarse"/>
 
     <Button
         android:id="@+id/recuperar"
@@ -75,7 +75,7 @@
         android:layout_height="0dp"
         android:layout_weight="0.15"
         android:layout_gravity="center"
-        android:text="Olvidé mi contraseña"/>
+        android:text="@string/contra_olvidada"/>
 
     <TextView
         android:id="@+id/txtEmpty2"

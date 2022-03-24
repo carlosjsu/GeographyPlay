@@ -11,12 +11,9 @@ import android.widget.Button;
 import androidx.navigation.ui.AppBarConfiguration;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.udistrital.geographyplay.databinding.ActivityInicioBinding;
 
 public class Inicio extends AppCompatActivity {
 
-    private AppBarConfiguration appBarConfiguration;
-    private ActivityInicioBinding binding;
     Button Iniciar;
 
     FirebaseAuth firebaseAuth;
